@@ -4,7 +4,6 @@ import {
   ArrowRight,
   Ban,
   Bitcoin,
-  Check,
   Clock,
   CreditCard,
   Database,
@@ -17,7 +16,6 @@ import {
   Shield,
   TrendingDown,
   Wrench,
-  X,
 } from "lucide-react"
 
 import { Accordion } from "@/components/ui/accordion"
@@ -442,17 +440,17 @@ export default function Page() {
         </div>
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
           <div className="space-y-8">
-            <div className="space-y-5">
-              <p className="text-lg font-semibold tracking-[0.18em] text-foreground/80 uppercase sm:text-xl">
+            <div>
+              <p className="-mt-5 mb-9 text-lg font-semibold tracking-[0.18em] text-foreground/80 uppercase sm:-mt-6 sm:mb-10 sm:text-xl">
                 Neplať kartou, <span className="text-orange-700">prosím</span>
               </p>
               <h1
-                className="max-w-4xl text-5xl leading-none tracking-tight text-balance sm:text-6xl lg:text-7xl"
+                className="max-w-4xl text-4xl leading-none tracking-tight text-balance sm:text-5xl lg:text-6xl"
                 style={displayFont}
               >
                 Když chceme hotovost nebo převod, neznamená to, že něco skrýváme.
               </h1>
-              <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground sm:mt-6 sm:text-xl">
                 Pro zákazníka je karta pohodlná. Pro obchodníka ale často znamená další poplatky,
                 čekání na peníze, riziko sporů, další techniku a složitější účetnictví. Tady
                 vysvětlujeme, proč část obchodníků raději bere hotovost nebo převod.
@@ -522,7 +520,7 @@ export default function Page() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 max-w-3xl space-y-4">
             <SectionKicker>Hlavní důvody</SectionKicker>
-            <h2 className="text-4xl leading-tight text-balance sm:text-5xl" style={displayFont}>
+            <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Dvanáct důvodů, které obchodník řeší dřív, než vám vůbec terminál podá.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
@@ -553,7 +551,7 @@ export default function Page() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="space-y-4">
             <SectionKicker>Jak to funguje</SectionKicker>
-            <h2 className="text-4xl leading-tight text-balance sm:text-5xl" style={displayFont}>
+            <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Zákazník vidí přiložení karty. Obchodník řeší celý řetězec navíc.
             </h2>
             <p className="text-lg leading-8 text-stone-300">
@@ -615,7 +613,7 @@ export default function Page() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl space-y-4">
             <SectionKicker>Mylné zkratky</SectionKicker>
-            <h2 className="text-4xl leading-tight text-balance sm:text-5xl" style={displayFont}>
+            <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Co si lidé často myslí a proč je obchodnická realita složitější.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
@@ -670,7 +668,7 @@ export default function Page() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="space-y-4">
             <SectionKicker>Detaily a zdroje</SectionKicker>
-            <h2 className="text-4xl leading-tight text-balance sm:text-5xl" style={displayFont}>
+            <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Podrobnosti najdete níže, aby hlavní argument zůstal čitelný.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
@@ -730,7 +728,7 @@ export default function Page() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="space-y-4">
             <SectionKicker>Datový tok</SectionKicker>
-            <h2 className="text-4xl leading-tight text-balance sm:text-5xl" style={displayFont}>
+            <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Kartová platba není jen přesun peněz. Zanechává i další datovou stopu.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
@@ -776,7 +774,7 @@ export default function Page() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl space-y-4">
             <SectionKicker>Proč terminál nevznikne</SectionKicker>
-            <h2 className="text-4xl leading-tight text-balance sm:text-5xl" style={displayFont}>
+            <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Čtyři prozaické důvody, proč si podnik terminál nepořídí nebo ho zase zruší.
             </h2>
             <p className="text-lg leading-8 text-stone-300">
@@ -805,7 +803,7 @@ export default function Page() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="space-y-4">
             <SectionKicker>Bezpečnost</SectionKicker>
-            <h2 className="text-4xl leading-tight text-balance sm:text-5xl" style={displayFont}>
+            <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Když obchodník přijímá karty, nepřijímá jen platbu, ale i další bezpečnostní riziko.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
@@ -836,7 +834,7 @@ export default function Page() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl space-y-4">
             <SectionKicker>Fér kompromis</SectionKicker>
-            <h2 className="text-4xl leading-tight text-balance sm:text-5xl" style={displayFont}>
+            <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Jak si z pohledu provozu stojí karta, hotovost, převod a bitcoin.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
@@ -865,7 +863,12 @@ export default function Page() {
                 const Icon = item.icon
 
                 return (
-                  <Card key={item.title} className="border-border/70 bg-background/85 py-0 shadow-sm backdrop-blur">
+                  <Card
+                    key={item.title}
+                    className={`border-border/70 bg-background/85 py-0 shadow-sm backdrop-blur ${
+                      item.title === "Bitcoin" ? "sm:col-span-2" : ""
+                    }`}
+                  >
                     <CardContent className="space-y-3 p-6">
                       <div className="flex items-center gap-3">
                         <Icon className="size-5 text-orange-800" />
@@ -915,33 +918,6 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="mt-8 grid gap-4 lg:grid-cols-2">
-            <Card className="border-border/70 bg-emerald-50 py-0 text-emerald-950 shadow-sm">
-              <CardContent className="space-y-3 p-6">
-                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-emerald-700">
-                  <Check className="size-4" />
-                  Bezpečně podložené tvrzení
-                </div>
-                <p className="text-base leading-7">
-                  Karta může být pro zákazníka pohodlnější, ale pro obchodníka přináší další náklady,
-                  pozdější vypořádání, další spory a výrazně složitější provoz než hotovost nebo běžný
-                  převod.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="border-border/70 bg-rose-50 py-0 text-rose-950 shadow-sm">
-              <CardContent className="space-y-3 p-6">
-                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-rose-700">
-                  <X className="size-4" />
-                  Co by bylo přehnané
-                </div>
-                <p className="text-base leading-7">
-                  Nebylo by poctivé tvrdit, že každý obchodník bez terminálu je automaticky poctivý,
-                  ani že každý subjekt v karetním ekosystému prodává syrová osobní data komukoli.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 

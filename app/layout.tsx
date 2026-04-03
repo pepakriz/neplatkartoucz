@@ -1,11 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Proč není dobré platit kartou",
@@ -37,7 +33,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="cs">
-      <body className={`font-sans antialiased`}>
+      <body
+        className="antialiased"
+        style={{ fontFamily: '"Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif' }}
+      >
         {children}
         <Analytics />
       </body>

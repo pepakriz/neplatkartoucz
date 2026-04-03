@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "check": "tsc --noEmit",
     "dev": "next dev",
     "start": "next start"
   },
@@ -44,7 +45,7 @@
     "embla-carousel-react": "8.6.0",
     "input-otp": "1.4.2",
     "lucide-react": "^0.562.0",
-    "next": "16.1.1",
+    "next": "16.2.2",
     "next-themes": "^0.4.6",
     "react": "19.2.3",
     "react-day-picker": "9.13.0",

@@ -4,9 +4,23 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Proč není dobré platit kartou",
-  description: "Informační web o skrytých nákladech a problémech plateb kartou pro obchodníky i zákazníky",
-  generator: "v0.app",
+  title: "Neplať kartou, prosím",
+  description:
+    "Web vysvětluje, proč obchodníci někdy dávají přednost hotovosti, bankovnímu převodu nebo bitcoinu před platbou kartou.",
+  applicationName: "Neplať kartou, prosím",
+  openGraph: {
+    title: "Neplať kartou, prosím",
+    description:
+      "Pohled obchodníka na poplatky, čekání na peníze, spory a další důvody, proč část prodejců nechce upřednostňovat platbu kartou.",
+    type: "website",
+    locale: "cs_CZ",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Neplať kartou, prosím",
+    description:
+      "Proč část obchodníků raději bere hotovost, převod nebo bitcoin než platbu kartou.",
+  },
   icons: {
     icon: [
       {

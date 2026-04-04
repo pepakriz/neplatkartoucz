@@ -4,22 +4,22 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Neplať kartou, prosím",
+  title: "Prosím, neplať kartou | Když chceme hotovost nebo převod",
   description:
-    "Web vysvětluje, proč obchodníci někdy dávají přednost hotovosti, bankovnímu převodu nebo bitcoinu před platbou kartou.",
-  applicationName: "Neplať kartou, prosím",
+    "Web vysvětluje, proč část obchodníků dává přednost hotovosti nebo převodu před platbou kartou a proč to samo o sobě neznamená nic nepoctivého.",
+  applicationName: "Prosím, neplať kartou",
   openGraph: {
-    title: "Neplať kartou, prosím",
+    title: "Prosím, neplať kartou",
     description:
-      "Pohled obchodníka na poplatky, čekání na peníze, spory a další důvody, proč část prodejců nechce upřednostňovat platbu kartou.",
+      "Pohled obchodníka na poplatky, čekání na peníze, spory, technické závislosti a další důvody, proč část podniků nechce upřednostňovat platbu kartou.",
     type: "website",
     locale: "cs_CZ",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Neplať kartou, prosím",
+    title: "Prosím, neplať kartou",
     description:
-      "Proč část obchodníků raději bere hotovost, převod nebo bitcoin než platbu kartou.",
+      "Proč část obchodníků raději bere hotovost nebo převod než platbu kartou.",
   },
   icons: {
     icon: [

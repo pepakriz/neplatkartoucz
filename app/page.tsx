@@ -180,31 +180,31 @@ const mythReality = [
   {
     myth: "„Kdo nebere karty, určitě obchází daně.“",
     whyItSticks:
-      "Bezhotovostní platby opravdu vytvářejí lépe dohledatelnou stopu a stát je často spojuje s větší transparentností.",
+      "Bezhotovostní platby po sobě opravdu zanechávají lépe dohledatelnou stopu a stát je často spojuje s větší transparentností.",
     whatItMisses: [
-      "Je to závěr o systému jako celku, ne důkaz o konkrétním podniku.",
-      "Obchodník může karty odmítat kvůli nízké marži, opožděnému připsání peněz, technickým problémům nebo jednoduššímu provozu.",
-      "Samotná absence terminálu nestačí. Smysl dává až širší kontext.",
+      "To může něco říkat o systému jako celku, ale samo o sobě to nic nedokazuje o konkrétním podniku bez terminálu.",
+      "Vedle toho existují i úplně běžné důvody: nízké marže, pozdější připsání peněz, zadržení části tržby jako rezerva, reklamace plateb, slabý signál nebo prostší provoz hotovosti a převodu.",
+      "Samotná absence terminálu proto nestačí. Smysl dává až širší kontext provozu, cen, lokality a způsobu evidence tržeb.",
     ],
   },
   {
     myth: "„Bez terminálu podnik automaticky přichází o tržby.“",
     whyItSticks:
-      "Z pohledu zákazníka to dává smysl. Když nemůže zaplatit obvyklým způsobem, snadno předpokládá, že obchod zbytečně odmítá peníze i nové zákazníky.",
+      "Z pohledu zákazníka to zní logicky. Když nemůže zaplatit svým obvyklým způsobem, snadno si řekne, že obchod zbytečně odmítá peníze i nové zákazníky.",
     whatItMisses: [
-      "Není to stejné pro každou provozovnu. V malé obci mohou být místní zvyklí na hotovost a zdražení kvůli terminálu by část z nich mohlo od nákupů spíš odradit.",
-      "U sezónního stánku nebo krátkodobého prodeje se náklady na techniku, připojení a obsluhu nemusí vrátit bez citelného zdražení.",
-      "U zavedeného městského podniku může být situace opačná. Smysl terminálu proto závisí na typu provozu, marži, lokalitě i struktuře zákazníků.",
+      "Není to stejné pro každou provozovnu. V malé obci mohou být místní zvyklí na hotovost a zdražení kvůli terminálu by část z nich spíš odradilo.",
+      "U sezónního stánku nebo krátkodobého prodeje se náklady na techniku, připojení, servis a další administrativu nemusí vrátit bez citelného zdražení.",
+      "Smysl terminálu proto vždy závisí na marži, obratu, lokalitě, spolehlivosti připojení i skladbě zákazníků.",
     ],
   },
   {
     myth: "„Je to jen dvě nebo tři desetiny procenta.“",
     whyItSticks:
-      "Ve veřejné debatě se často opakují evropské stropy 0,2 % a 0,3 %, takže to působí jako celá cena karetní platby.",
+      "Ve veřejné debatě se často opakují evropské stropy 0,2 % a 0,3 %, takže to snadno působí jako celá cena karetní platby.",
     whatItMisses: [
-      "Tyto stropy se týkají jen části regulovaných spotřebitelských karet.",
-      "Skutečný náklad obchodníka zahrnuje i poplatky karetním schématům, marži poskytovatele a další položky.",
-      "U firemních, zahraničních nebo online plateb může být reálná cena výrazně vyšší.",
+      "Stropy 0,2 % a 0,3 % se týkají jen jedné části poplatku a jen části běžných spotřebitelských karet v Evropě.",
+      "Skutečný náklad obchodníka zahrnuje i další poplatky karetním společnostem, marži poskytovatele, terminál, vratky plateb a další položky.",
+      "U firemních, zahraničních, internetových nebo rizikovějších plateb může být reálný náklad obchodníka výrazně vyšší než veřejně opakovaná čísla.",
     ],
   },
   {
@@ -212,9 +212,9 @@ const mythReality = [
     whyItSticks:
       "Zákazník vidí schválenou transakci okamžitě a snadno si to splete s tím, že obchodník má peníze také hned.",
     whatItMisses: [
-      "Schválení platby, zúčtování a skutečné připsání peněz jsou tři různé okamžiky.",
-      "Na účet často dorazí až čistá částka po poplatcích, vratkách nebo reklamacích.",
-      "Část peněz může být dočasně zadržena jako rezerva na budoucí spory.",
+      "Schválení platby, zúčtování a skutečné připsání peněz jsou tři různé okamžiky. Zákazník vidí první, obchodník čeká na poslední.",
+      "Na účet často dorazí až čistá částka po odečtení poplatků, vratek a úprav spojených se spory o platbu, ne celá utracená suma.",
+      "Poskytovatel navíc může část peněz zadržet jako rezervu nebo připsání peněz zpozdit kvůli svému vyhodnocení rizik.",
     ],
   },
   {
@@ -222,9 +222,9 @@ const mythReality = [
     whyItSticks:
       "Schválená platba působí definitivně. Na obrazovce je hotovo a zákazník odchází.",
     whatItMisses: [
-      "U karet existují spory, zpětná vrácení plateb, vratky a dodatečné úpravy.",
-      "Obchodník pak musí zpětně dokládat, že transakce proběhla správně.",
-      "I vyhraný spor znamená další čas, administrativu a nejistotu navíc.",
+      "Ve světě karetních plateb schválení neznamená definitivní konec. Existují spory, zpětné vrácení plateb, záměna plateb na výpisu i takzvané přátelské podvody.",
+      "Obchodník pak musí zpětně dokládat, že transakce proběhla správně, a často nese i další poplatky a administrativní zátěž.",
+      "I vyhraný spor stojí čas a energii a zhoršuje jistotu peněžního toku i celkové hodnocení rizika podniku.",
     ],
   },
   {
@@ -232,9 +232,9 @@ const mythReality = [
     whyItSticks:
       "Zvenku to tak opravdu vypadá. Zákazník vidí zařízení, přiložení karty a potvrzení.",
     whatItMisses: [
-      "Za terminálem je další smlouva, připojení, servis, někdy i integrace s pokladnou a řešení výpadků.",
-      "Když vypadne síť nebo poskytovatel, problém dopadne na obchodníka stojícího před zákazníkem.",
-      "U malého provozu je i jeden technický článek navíc reálná provozní komplikace.",
+      "Za terminálem je smlouva, připojení, servis, někdy i propojení s pokladnou, školení obsluhy a řešení výpadků.",
+      "Slabý signál nebo nestabilní internet navíc v některých provozech nejsou výmluva, ale reálný problém.",
+      "Když vypadne síť, terminál nebo poskytovatel, reputační škodu u pultu nenese karetní síť, ale obchodník stojící před zákazníkem.",
     ],
   },
   {
@@ -242,9 +242,9 @@ const mythReality = [
     whyItSticks:
       "V běžné řeči se karta popisuje jen jako pohodlný způsob, jak přesunout peníze od zákazníka k obchodníkovi.",
     whatItMisses: [
-      "S platbou vzniká i datový záznam o nákupu, místě, čase a částce.",
-      "Tato data neslouží jen pro zúčtování, ale i pro vyhodnocování rizik, srovnávací přehledy a analytické produkty.",
-      "Vedle platební vrstvy tak vzniká i další bezpečnostní a datová vrstva.",
+      "S platbou vzniká i datový záznam o čase, místě, částce a typu nákupu, který prochází přes více článků celé infrastruktury.",
+      "Nejde jen o samotné zúčtování, ale i o vyhodnocování rizik, srovnávací přehledy, analytické a marketingové produkty nad souhrnnými daty.",
+      "Vedle platební vrstvy tak vzniká i další datová a bezpečnostní vrstva, kterou obchodník musí nést, aniž by ji plně řídil.",
     ],
   },
 ]
@@ -804,29 +804,34 @@ export default function Page() {
           </div>
 
           <div className="space-y-4">
-            {mythReality.map(({ myth, whyItSticks, whatItMisses }) => (
-              <Card key={myth} className="border-border/70 bg-background/85 py-0 shadow-sm backdrop-blur">
-                <CardContent className="space-y-5 p-6">
-                  <div className="rounded-2xl bg-rose-50 p-5 text-rose-950">
-                    <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-rose-700">
-                      <AlertTriangle className="size-4" />
-                      Častá domněnka
+            {mythReality.map(({ myth, whyItSticks, whatItMisses }, index) => {
+              const bubblePosition =
+                index % 2 === 0
+                  ? "justify-start before:-left-[0.62rem] before:border-l before:border-b after:-left-[0.5rem]"
+                  : "justify-end before:-right-[0.62rem] before:border-r before:border-t after:-right-[0.5rem]"
+
+              return (
+                <div key={myth} className="space-y-5 py-2">
+                  <div className={`flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
+                    <div
+                      className={`relative isolate max-w-2xl rounded-[1.8rem] border border-rose-300 bg-rose-50 px-6 py-5 text-rose-950 shadow-sm before:absolute before:top-1/2 before:size-5 before:-translate-y-1/2 before:rotate-45 before:border-rose-300 before:bg-rose-50 before:content-[''] after:absolute after:top-1/2 after:size-4 after:-translate-y-1/2 after:rotate-45 after:bg-rose-50 after:content-[''] sm:px-7 sm:py-6 ${bubblePosition}`}
+                    >
+                      <p className="text-lg font-semibold leading-7">{myth}</p>
                     </div>
-                    <p className="mt-3 text-lg font-semibold leading-7">{myth}</p>
                   </div>
 
                   <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">
-                    <div className="rounded-2xl bg-amber-50 p-5 text-amber-950">
+                    <div className="rounded-2xl bg-amber-50 p-5 text-amber-950 shadow-sm">
                       <div className="text-xs uppercase tracking-[0.22em] text-amber-700">
                         Proč to zní uvěřitelně
                       </div>
                       <p className="mt-3 text-base leading-7">{whyItSticks}</p>
                     </div>
 
-                    <div className="rounded-2xl bg-emerald-50 p-5 text-emerald-950">
+                    <div className="rounded-2xl bg-emerald-50 p-5 text-emerald-950 shadow-sm">
                       <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-emerald-700">
                         <TrendingDown className="size-4" />
-                        Co v té zkratce chybí
+                        Co v této zkratce chybí
                       </div>
                       <ul className="mt-3 space-y-3 text-base leading-7">
                         {whatItMisses.map((point) => (
@@ -838,9 +843,9 @@ export default function Page() {
                       </ul>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

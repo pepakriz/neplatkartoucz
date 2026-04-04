@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import {
   AlertTriangle,
   ArrowRight,
@@ -518,13 +519,13 @@ export default function Page() {
     <main className="relative overflow-hidden bg-background text-foreground">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(236,72,39,0.16),_transparent_34%),radial-gradient(circle_at_85%_12%,_rgba(245,158,11,0.18),_transparent_22%),linear-gradient(180deg,_rgba(250,246,240,0.92),_rgba(255,255,255,1)_36%,_rgba(248,244,236,0.75)_100%)]" />
 
-      <section className="relative overflow-hidden border-b border-border/60 px-4 pb-16 pt-24 sm:pt-32">
+      <section className="relative overflow-hidden border-b border-border/60 px-4 pb-16 pt-10 sm:pt-14">
         <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(120,63,30,0.34),transparent_0,transparent_26%),radial-gradient(circle_at_88%_16%,rgba(255,210,153,0.36),transparent_0,transparent_18%),linear-gradient(90deg,rgba(255,249,242,0.96)_0%,rgba(255,249,242,0.9)_34%,rgba(255,249,242,0.62)_56%,rgba(69,36,21,0.34)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(120,63,30,0.22),transparent_0,transparent_26%),radial-gradient(circle_at_88%_16%,rgba(255,210,153,0.22),transparent_0,transparent_18%),linear-gradient(90deg,rgba(255,249,242,0.97)_0%,rgba(255,249,242,0.9)_34%,rgba(255,249,242,0.38)_56%,rgba(69,36,21,0.16)_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0)_20%,rgba(255,248,242,0.7)_100%)]" />
         </div>
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-          <div className="space-y-8">
+        <div className="mx-auto max-w-7xl space-y-10 lg:space-y-14">
+          <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
             <div>
               <p className="-mt-5 mb-9 flex flex-wrap items-end gap-x-2 gap-y-1 font-semibold uppercase sm:-mt-6 sm:mb-10">
                 <span className="text-lg tracking-[0.18em] text-foreground/45 sm:text-xl">Prosím,</span>
@@ -534,12 +535,36 @@ export default function Page() {
                 <span className="text-lg tracking-[0.18em] text-orange-700 sm:text-xl">Děkujeme</span>
               </p>
               <h1
-                className="my-12 max-w-4xl text-4xl leading-none tracking-tight text-balance sm:my-14 sm:text-5xl lg:text-6xl"
+                className="max-w-2xl text-4xl leading-none tracking-tight text-balance sm:text-5xl lg:text-6xl"
                 style={displayFont}
               >
                 Když chceme hotovost nebo převod, neznamená to, že něco skrýváme.
               </h1>
-              <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground sm:mt-6 sm:text-xl">
+              <div className="relative mt-8 h-[15rem] sm:h-[18rem] lg:hidden">
+                <Image
+                    src="/bg.webp"
+                  alt=""
+                  fill
+                  className="object-contain object-center mix-blend-multiply opacity-85"
+                  priority
+                />
+              </div>
+            </div>
+
+            <div className="relative hidden h-[32rem] lg:block">
+              <Image
+                  src="/bg.webp"
+                alt=""
+                fill
+                className="scale-125 object-contain object-right-center mix-blend-multiply opacity-90"
+                priority
+              />
+            </div>
+          </div>
+
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start lg:gap-12">
+            <div className="space-y-8">
+              <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
                 Pro zákazníka je karta pohodlná. Pro obchodníka ale často znamená{" "}
                 <strong className="font-semibold text-foreground">další poplatky</strong>,{" "}
                 <strong className="font-semibold text-foreground">čekání na peníze</strong>,{" "}
@@ -547,124 +572,124 @@ export default function Page() {
                 techniku a složitější účetnictví. Tady vysvětlujeme, proč část obchodníků raději
                 bere hotovost nebo převod.
               </p>
-            </div>
 
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="#hlavni-duvody"
-                className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
-              >
-                Hlavní důvody
-                <ArrowRight className="size-4" />
-              </Link>
-              <Link
-                href="#mylne-zkratky"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-muted"
-              >
-                Mylné domněnky
-              </Link>
-              <Link
-                href="#detaily"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-muted"
-              >
-                Detaily a zdroje
-              </Link>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-3">
-              <div className="group relative overflow-hidden rounded-[1.75rem] border border-orange-200/80 bg-[linear-gradient(180deg,rgba(255,247,237,0.96),rgba(255,255,255,0.88))] p-5 shadow-[0_18px_50px_-28px_rgba(194,65,12,0.45)] backdrop-blur">
-                <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-orange-200/50 blur-2xl transition-transform duration-500 group-hover:scale-125" />
-                <div className="relative">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-2xl bg-orange-500 text-white shadow-sm">
-                      <AlertTriangle className="size-4" />
-                    </div>
-                  </div>
-                  <div className="mt-5 text-2xl font-semibold tracking-tight text-orange-950">
-                    Jednostranný příběh
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-orange-950/75">
-                    Ve veřejném prostoru se mluví hlavně o{" "}
-                    <strong className="font-semibold text-orange-950">pohodlí zákazníka</strong> a
-                    o <strong className="font-semibold text-orange-950">boji proti šedé ekonomice</strong>.
-                    Mnohem méně se ale mluví o nákladech, omezeních a rizicích, které nese
-                    obchodník.
-                  </p>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-[1.75rem] border border-rose-200/80 bg-[linear-gradient(180deg,rgba(255,241,242,0.96),rgba(255,255,255,0.9))] p-5 shadow-[0_18px_50px_-28px_rgba(190,24,93,0.35)] backdrop-blur">
-                <div className="absolute left-0 top-0 h-24 w-24 rounded-full bg-rose-200/50 blur-2xl transition-transform duration-500 group-hover:scale-125" />
-                <div className="relative">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-2xl bg-rose-500 text-white shadow-sm">
-                      <TrendingDown className="size-4" />
-                    </div>
-                  </div>
-                  <div className="mt-5 text-2xl font-semibold tracking-tight text-rose-950">
-                    Morální nálepka
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-rose-950/75">
-                    Články a komentáře často spojují absenci terminálu s{" "}
-                    <strong className="font-semibold text-rose-950">podezřením na nepřiznané tržby</strong>.
-                    Z běžného provozního rozhodnutí se tak snadno stává podezření, že podnik
-                    nejedná poctivě.
-                  </p>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-[1.75rem] border border-amber-200/80 bg-[linear-gradient(180deg,rgba(255,251,235,0.98),rgba(255,255,255,0.9))] p-5 shadow-[0_18px_50px_-28px_rgba(180,83,9,0.38)] backdrop-blur">
-                <div className="absolute bottom-0 right-0 h-24 w-24 rounded-full bg-amber-200/60 blur-2xl transition-transform duration-500 group-hover:scale-125" />
-                <div className="relative">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex size-10 items-center justify-center rounded-2xl bg-amber-500 text-white shadow-sm">
-                      <Shield className="size-4" />
-                    </div>
-                  </div>
-                  <div className="mt-5 text-2xl font-semibold tracking-tight text-amber-950">
-                    Silnější hráči
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-amber-950/75">
-                    Stát i regulace dlouhodobě podporují{" "}
-                    <strong className="font-semibold text-amber-950">bezhotovostní infrastrukturu</strong>.
-                    V praxi to posiluje prostředí, ve kterém mají velcí karetní hráči typu Visa a
-                    Mastercard silnější výchozí pozici než malý obchodník.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-end gap-5 lg:pl-4">
-            <div className="space-y-3">
-              <div className="flex items-center gap-3 text-sm text-foreground/70">
-                <AlertTriangle className="size-4 text-orange-800" />
-                <span className="uppercase tracking-[0.22em]">Poznáváte se?</span>
-              </div>
-              <p className="max-w-md text-sm leading-6 text-muted-foreground">
-                Možná jen nemáte představu,{" "}
-                <strong className="font-semibold text-foreground">
-                  co všechno se za akceptováním plateb kartou skrývá
-                </strong>.
-                Nevadí. Jste na správném místě.
-              </p>
-            </div>
-            <div className="grid items-start gap-4 sm:grid-cols-6 lg:gap-5">
-              {customerReactions.map(({ quote, className, tailClassName }) => (
-                <div
-                  key={quote}
-                  className={`relative max-w-full rounded-[1.7rem] border px-4 py-3 text-xs leading-5 font-medium shadow-md transition-transform duration-300 ease-out will-change-transform after:absolute after:-bottom-[0.42rem] after:size-3.5 after:rotate-45 after:border-r after:border-b after:border-inherit after:bg-inherit after:content-[''] sm:max-w-[18rem] sm:text-sm ${tailClassName} ${className}`}
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="#hlavni-duvody"
+                  className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
                 >
-                  {quote}
+                  Hlavní důvody
+                  <ArrowRight className="size-4" />
+                </Link>
+                <Link
+                  href="#mylne-zkratky"
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-muted"
+                >
+                  Mylné domněnky
+                </Link>
+                <Link
+                  href="#detaily"
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-muted"
+                >
+                  Detaily a zdroje
+                </Link>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-3">
+                <div className="group relative overflow-hidden rounded-[1.75rem] border border-orange-200/80 bg-[linear-gradient(180deg,rgba(255,247,237,0.96),rgba(255,255,255,0.88))] p-5 shadow-[0_18px_50px_-28px_rgba(194,65,12,0.45)] backdrop-blur">
+                  <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-orange-200/50 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+                  <div className="relative">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex size-10 items-center justify-center rounded-2xl bg-orange-500 text-white shadow-sm">
+                        <AlertTriangle className="size-4" />
+                      </div>
+                    </div>
+                    <div className="mt-5 text-2xl font-semibold tracking-tight text-orange-950">
+                      Jednostranný příběh
+                    </div>
+                    <p className="mt-3 text-sm leading-6 text-orange-950/75">
+                      Ve veřejném prostoru se mluví hlavně o{" "}
+                      <strong className="font-semibold text-orange-950">pohodlí zákazníka</strong> a
+                      o <strong className="font-semibold text-orange-950">boji proti šedé ekonomice</strong>.
+                      Mnohem méně se ale mluví o nákladech, omezeních a rizicích, které nese
+                      obchodník.
+                    </p>
+                  </div>
                 </div>
-              ))}
+                <div className="group relative overflow-hidden rounded-[1.75rem] border border-rose-200/80 bg-[linear-gradient(180deg,rgba(255,241,242,0.96),rgba(255,255,255,0.9))] p-5 shadow-[0_18px_50px_-28px_rgba(190,24,93,0.35)] backdrop-blur">
+                  <div className="absolute left-0 top-0 h-24 w-24 rounded-full bg-rose-200/50 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+                  <div className="relative">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex size-10 items-center justify-center rounded-2xl bg-rose-500 text-white shadow-sm">
+                        <TrendingDown className="size-4" />
+                      </div>
+                    </div>
+                    <div className="mt-5 text-2xl font-semibold tracking-tight text-rose-950">
+                      Morální nálepka
+                    </div>
+                    <p className="mt-3 text-sm leading-6 text-rose-950/75">
+                      Články a komentáře často spojují absenci terminálu s{" "}
+                      <strong className="font-semibold text-rose-950">podezřením na nepřiznané tržby</strong>.
+                      Z běžného provozního rozhodnutí se tak snadno stává podezření, že podnik
+                      nejedná poctivě.
+                    </p>
+                  </div>
+                </div>
+                <div className="group relative overflow-hidden rounded-[1.75rem] border border-amber-200/80 bg-[linear-gradient(180deg,rgba(255,251,235,0.98),rgba(255,255,255,0.9))] p-5 shadow-[0_18px_50px_-28px_rgba(180,83,9,0.38)] backdrop-blur">
+                  <div className="absolute bottom-0 right-0 h-24 w-24 rounded-full bg-amber-200/60 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+                  <div className="relative">
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="flex size-10 items-center justify-center rounded-2xl bg-amber-500 text-white shadow-sm">
+                        <Shield className="size-4" />
+                      </div>
+                    </div>
+                    <div className="mt-5 text-2xl font-semibold tracking-tight text-amber-950">
+                      Silnější hráči
+                    </div>
+                    <p className="mt-3 text-sm leading-6 text-amber-950/75">
+                      Stát i regulace dlouhodobě podporují{" "}
+                      <strong className="font-semibold text-amber-950">bezhotovostní infrastrukturu</strong>.
+                      V praxi to posiluje prostředí, ve kterém mají velcí karetní hráči typu Visa a
+                      Mastercard silnější výchozí pozici než malý obchodník.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="pt-3 sm:pt-5">
-              <Link
-                href="#mylne-zkratky"
-                className="inline-flex items-center gap-2 text-sm font-medium text-orange-800 transition-colors hover:text-orange-950"
-              >
-                Proč tyto zkratky často neplatí
-                <ArrowRight className="size-4" />
-              </Link>
+
+            <div className="w-full lg:justify-self-end">
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-sm text-foreground/70">
+                  <AlertTriangle className="size-4 text-orange-800" />
+                  <span className="uppercase tracking-[0.22em]">Poznáváte se?</span>
+                </div>
+                <p className="text-sm leading-6 text-muted-foreground">
+                  Možná jen nemáte představu,{" "}
+                  <strong className="font-semibold text-foreground">
+                    co všechno se za akceptováním plateb kartou skrývá
+                  </strong>.
+                  Nevadí. Jste na správném místě.
+                </p>
+              </div>
+              <div className="mt-5 grid items-start gap-4 sm:grid-cols-6 lg:grid-cols-1 lg:gap-4">
+                {customerReactions.map(({ quote, className, tailClassName }) => (
+                  <div
+                    key={quote}
+                    className={`relative max-w-full rounded-[1.7rem] border px-4 py-3 text-xs leading-5 font-medium shadow-md transition-transform duration-300 ease-out will-change-transform after:absolute after:-bottom-[0.42rem] after:size-3.5 after:rotate-45 after:border-r after:border-b after:border-inherit after:bg-inherit after:content-[''] sm:max-w-[18rem] sm:text-sm lg:max-w-none ${tailClassName} ${className}`}
+                  >
+                    {quote}
+                  </div>
+                ))}
+              </div>
+              <div className="pt-3 sm:pt-5">
+                <Link
+                  href="#mylne-zkratky"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-orange-800 transition-colors hover:text-orange-950"
+                >
+                  Proč tyto zkratky často neplatí
+                  <ArrowRight className="size-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

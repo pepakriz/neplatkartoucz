@@ -526,20 +526,26 @@ export default function Page() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="space-y-8">
             <div>
-              <p className="-mt-5 mb-9 text-lg font-semibold tracking-[0.18em] text-foreground/80 uppercase sm:-mt-6 sm:mb-10 sm:text-xl">
-                <span className="text-foreground/45">Prosím, </span>neplať kartou...{" "}
-                <span className="text-orange-700">Děkujeme</span>
+              <p className="-mt-5 mb-9 flex flex-wrap items-end gap-x-2 gap-y-1 font-semibold uppercase sm:-mt-6 sm:mb-10">
+                <span className="text-lg tracking-[0.18em] text-foreground/45 sm:text-xl">Prosím,</span>
+                <span className="text-2xl tracking-[0.14em] text-foreground/80 sm:text-3xl">
+                  neplať kartou,
+                </span>
+                <span className="text-lg tracking-[0.18em] text-orange-700 sm:text-xl">Děkujeme</span>
               </p>
               <h1
-                className="max-w-4xl text-4xl leading-none tracking-tight text-balance sm:text-5xl lg:text-6xl"
+                className="my-12 max-w-4xl text-4xl leading-none tracking-tight text-balance sm:my-14 sm:text-5xl lg:text-6xl"
                 style={displayFont}
               >
                 Když chceme hotovost nebo převod, neznamená to, že něco skrýváme.
               </h1>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-muted-foreground sm:mt-6 sm:text-xl">
-                Pro zákazníka je karta pohodlná. Pro obchodníka ale často znamená další poplatky,
-                čekání na peníze, riziko sporů, další techniku a složitější účetnictví. Tady
-                vysvětlujeme, proč část obchodníků raději bere hotovost nebo převod.
+                Pro zákazníka je karta pohodlná. Pro obchodníka ale často znamená{" "}
+                <strong className="font-semibold text-foreground">další poplatky</strong>,{" "}
+                <strong className="font-semibold text-foreground">čekání na peníze</strong>,{" "}
+                <strong className="font-semibold text-foreground">riziko sporů</strong>, další
+                techniku a složitější účetnictví. Tady vysvětlujeme, proč část obchodníků raději
+                bere hotovost nebo převod.
               </p>
             </div>
 
@@ -565,27 +571,64 @@ export default function Page() {
               </Link>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-3">
-              <div className="rounded-2xl border border-border/70 bg-background/80 p-4 backdrop-blur">
-                <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Veřejná zkratka</div>
-                <div className="mt-2 text-2xl font-semibold">0,2 % / 0,3 %</div>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Veřejně se mluví hlavně o evropských stropech. To ale není celý náklad obchodníka.
-                </p>
+            <div className="grid gap-4 sm:grid-cols-3">
+              <div className="group relative overflow-hidden rounded-[1.75rem] border border-orange-200/80 bg-[linear-gradient(180deg,rgba(255,247,237,0.96),rgba(255,255,255,0.88))] p-5 shadow-[0_18px_50px_-28px_rgba(194,65,12,0.45)] backdrop-blur">
+                <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-orange-200/50 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+                <div className="relative">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex size-10 items-center justify-center rounded-2xl bg-orange-500 text-white shadow-sm">
+                      <AlertTriangle className="size-4" />
+                    </div>
+                  </div>
+                  <div className="mt-5 text-2xl font-semibold tracking-tight text-orange-950">
+                    Jednostranný příběh
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-orange-950/75">
+                    Ve veřejném prostoru se mluví hlavně o{" "}
+                    <strong className="font-semibold text-orange-950">pohodlí zákazníka</strong> a
+                    o <strong className="font-semibold text-orange-950">boji proti šedé ekonomice</strong>.
+                    Mnohem méně se ale mluví o nákladech, omezeních a rizicích, které nese
+                    obchodník.
+                  </p>
+                </div>
               </div>
-              <div className="rounded-2xl border border-border/70 bg-background/80 p-4 backdrop-blur">
-                <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Realita provozu</div>
-                <div className="mt-2 text-2xl font-semibold">Až za 1-2 dny</div>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Platba je potvrzená hned, ale peníze mohou dorazit až později a po srážkách.
-                </p>
+              <div className="group relative overflow-hidden rounded-[1.75rem] border border-rose-200/80 bg-[linear-gradient(180deg,rgba(255,241,242,0.96),rgba(255,255,255,0.9))] p-5 shadow-[0_18px_50px_-28px_rgba(190,24,93,0.35)] backdrop-blur">
+                <div className="absolute left-0 top-0 h-24 w-24 rounded-full bg-rose-200/50 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+                <div className="relative">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex size-10 items-center justify-center rounded-2xl bg-rose-500 text-white shadow-sm">
+                      <TrendingDown className="size-4" />
+                    </div>
+                  </div>
+                  <div className="mt-5 text-2xl font-semibold tracking-tight text-rose-950">
+                    Morální nálepka
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-rose-950/75">
+                    Články a komentáře často spojují absenci terminálu s{" "}
+                    <strong className="font-semibold text-rose-950">podezřením na nepřiznané tržby</strong>.
+                    Z běžného provozního rozhodnutí se tak snadno stává podezření, že podnik
+                    nejedná poctivě.
+                  </p>
+                </div>
               </div>
-              <div className="rounded-2xl border border-border/70 bg-background/80 p-4 backdrop-blur">
-                <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">Po zaplacení</div>
-                <div className="mt-2 text-2xl font-semibold">Vrácení platby</div>
-                <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                  Už zaplacený nákup se může vrátit do sporu a obchodník pak musí vše dokládat.
-                </p>
+              <div className="group relative overflow-hidden rounded-[1.75rem] border border-amber-200/80 bg-[linear-gradient(180deg,rgba(255,251,235,0.98),rgba(255,255,255,0.9))] p-5 shadow-[0_18px_50px_-28px_rgba(180,83,9,0.38)] backdrop-blur">
+                <div className="absolute bottom-0 right-0 h-24 w-24 rounded-full bg-amber-200/60 blur-2xl transition-transform duration-500 group-hover:scale-125" />
+                <div className="relative">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex size-10 items-center justify-center rounded-2xl bg-amber-500 text-white shadow-sm">
+                      <Shield className="size-4" />
+                    </div>
+                  </div>
+                  <div className="mt-5 text-2xl font-semibold tracking-tight text-amber-950">
+                    Silnější hráči
+                  </div>
+                  <p className="mt-3 text-sm leading-6 text-amber-950/75">
+                    Stát i regulace dlouhodobě podporují{" "}
+                    <strong className="font-semibold text-amber-950">bezhotovostní infrastrukturu</strong>.
+                    V praxi to posiluje prostředí, ve kterém mají velcí karetní hráči typu Visa a
+                    Mastercard silnější výchozí pozici než malý obchodník.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -597,7 +640,10 @@ export default function Page() {
                 <span className="uppercase tracking-[0.22em]">Poznáváte se?</span>
               </div>
               <p className="max-w-md text-sm leading-6 text-muted-foreground">
-                Možná jen nemáte představu, co všechno se za akceptováním plateb kartou skrývá.
+                Možná jen nemáte představu,{" "}
+                <strong className="font-semibold text-foreground">
+                  co všechno se za akceptováním plateb kartou skrývá
+                </strong>.
                 Nevadí. Jste na správném místě.
               </p>
             </div>
@@ -632,8 +678,8 @@ export default function Page() {
               Dvanáct důvodů, které obchodník řeší dřív, než vám vůbec terminál podá.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
-              Na hlavní stránce uvádíme dvanáct nejčastějších důvodů. Podrobnosti a zdroje
-              najdete níž v rozbalovacích blocích.
+              Na hlavní stránce uvádíme <strong className="font-semibold text-foreground">dvanáct nejčastějších důvodů</strong>.
+              Podrobnosti a zdroje najdete níž v rozbalovacích blocích.
             </p>
           </div>
 
@@ -663,9 +709,10 @@ export default function Page() {
               Zákazník vidí přiložení karty. Obchodník řeší celý řetězec navíc.
             </h2>
             <p className="text-lg leading-8 text-stone-300">
-              Karta není jen jiný způsob, jak přijmout peníze. Přináší další pravidla, další firmy
+              Karta není jen jiný způsob, jak přijmout peníze. Přináší{" "}
+              <strong className="font-semibold text-stone-50">další pravidla</strong>, další firmy
               mezi námi a zákazníkem, další data i další možné spory. U hotovosti nebo běžného
-              převodu to bývá výrazně jednodušší.
+              převodu to bývá <strong className="font-semibold text-stone-50">výrazně jednodušší</strong>.
             </p>
           </div>
 
@@ -725,8 +772,9 @@ export default function Page() {
               Co si lidé často myslí a proč je obchodnická realita složitější.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
-              Tyto věty často nevznikají ze zlé vůle. Obvykle v sobě mají kus pravdy, ale vynechávají
-              důležitý kontext. Právě to pak vede k mylným závěrům o obchodnících i o kartách.
+              Tyto věty často nevznikají ze zlé vůle. Obvykle v sobě mají kus pravdy, ale
+              vynechávají <strong className="font-semibold text-foreground">důležitý kontext</strong>.
+              Právě to pak vede k mylným závěrům o obchodnících i o kartách.
             </p>
           </div>
 
@@ -1030,7 +1078,25 @@ export default function Page() {
       </section>
 
       <footer className="border-t border-border/60 px-4 py-8">
-        <div className="mx-auto flex max-w-7xl justify-end text-sm text-muted-foreground">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-end gap-4 text-sm text-muted-foreground">
+          <Link
+            href="https://github.com/pepakriz/neplatkartoucz/issues/new"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
+          >
+            Napište nám vlastní příběh
+            <ArrowRight className="size-4" />
+          </Link>
+          <Link
+            href="https://github.com/pepakriz/neplatkartoucz"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
+          >
+            Zdrojový kód na GitHubu
+            <ArrowRight className="size-4" />
+          </Link>
           <Link href="#detaily" className="inline-flex items-center gap-2 font-medium text-foreground">
             Otevřít podrobné argumenty
             <ArrowRight className="size-4" />

@@ -100,6 +100,81 @@ const keyReasons = [
   },
 ]
 
+const customerReactions = [
+  {
+    quote: "„To vám napíšu do recenze hned jako první věc.“",
+    className:
+      "border-orange-300 bg-orange-100/90 text-orange-950 rotate-2 sm:col-span-3 sm:col-start-4 sm:justify-self-end sm:-mt-1 sm:rotate-4 hover:-translate-y-0.5 hover:rotate-5",
+    tailClassName: "after:left-auto after:right-10",
+  },
+  {
+    quote: "„To je zase podnik, co nechce přiznávat tržby.“",
+    className:
+      "border-rose-300 bg-rose-50 text-rose-950 -rotate-2 sm:col-span-2 sm:col-start-2 sm:justify-self-center sm:-mt-2 sm:-rotate-4 hover:-translate-x-0.5 hover:-rotate-5",
+    tailClassName: "after:left-1/2 after:-translate-x-1/2",
+  },
+  {
+    quote: "„Sem už fakt nepřijdu.“",
+    className:
+      "border-lime-300 bg-lime-50 text-lime-950 rotate-2 sm:col-span-3 sm:col-start-1 sm:justify-self-center sm:-mt-4 sm:max-w-[15rem] sm:text-base sm:rotate-4 hover:translate-y-0.5 hover:rotate-5",
+    tailClassName: "after:left-10",
+  },
+  {
+    quote: "„V roce 2026 a bez karet? To je ostuda.“",
+    className:
+      "border-sky-300 bg-sky-50 text-sky-950 -rotate-3 sm:col-span-3 sm:col-start-4 sm:justify-self-start sm:-mt-3 sm:max-w-[15rem] sm:-rotate-5 hover:-translate-y-0.5 hover:-rotate-6",
+    tailClassName: "after:left-auto after:right-9",
+  },
+  {
+    quote: "„To je přesně, jak se obcházejí daně.“",
+    className:
+      "border-orange-400 bg-orange-200/80 text-orange-950 rotate-3 sm:col-span-2 sm:col-start-3 sm:justify-self-end sm:-mt-1 sm:rotate-5 hover:translate-x-0.5 hover:rotate-6",
+    tailClassName: "after:left-1/2 after:-translate-x-1/2",
+  },
+  {
+    quote: "„Jasně, jen hotovost... to je vždycky podezřelé.“",
+    className:
+      "border-amber-300 bg-amber-50 text-amber-950 -rotate-2 sm:col-span-3 sm:col-start-4 sm:justify-self-center sm:-mt-5 sm:max-w-[16rem] sm:-rotate-4 hover:-translate-x-0.5 hover:-rotate-5",
+    tailClassName: "after:left-9",
+  },
+  {
+    quote: "„Vy asi moc rádi daně neplatíte, co?“",
+    className:
+      "border-teal-300 bg-teal-50 text-teal-950 rotate-2 sm:col-span-3 sm:col-start-2 sm:justify-self-start sm:-mt-2 sm:max-w-[15rem] sm:rotate-4 hover:translate-y-0.5 hover:rotate-5",
+    tailClassName: "after:left-auto after:right-10",
+  },
+  {
+    quote: "„Tohle je přesně na jednu hvězdu.“",
+    className:
+      "border-emerald-300 bg-emerald-50 text-emerald-950 -rotate-2 sm:col-span-2 sm:col-start-5 sm:justify-self-center sm:-mt-6 sm:max-w-[14rem] sm:-rotate-4 hover:-translate-y-0.5 hover:-rotate-5",
+    tailClassName: "after:left-8",
+  },
+  {
+    quote: "„Nemám u sebe dost hotovosti.“",
+    className:
+      "border-violet-300 bg-violet-50 text-violet-950 rotate-2 sm:col-span-2 sm:col-start-1 sm:justify-self-center sm:-mt-3 sm:max-w-[13rem] sm:rotate-4 hover:translate-y-0.5 hover:rotate-5",
+    tailClassName: "after:left-auto after:right-9",
+  },
+  {
+    quote: "„Příště jdu radši jinam.“",
+    className:
+      "border-cyan-300 bg-cyan-50 text-cyan-950 -rotate-3 sm:col-span-2 sm:col-start-3 sm:justify-self-start sm:-mt-7 sm:max-w-[13rem] sm:-rotate-5 hover:-translate-y-0.5 hover:-rotate-6",
+    tailClassName: "after:left-1/2 after:-translate-x-1/2",
+  },
+  {
+    quote: "„To jste se zasekli v minulém století?“",
+    className:
+      "border-fuchsia-300 bg-fuchsia-50 text-fuchsia-950 rotate-2 sm:col-span-3 sm:col-start-4 sm:justify-self-end sm:-mt-4 sm:max-w-[16rem] sm:rotate-4 hover:translate-x-0.5 hover:rotate-5",
+    tailClassName: "after:left-auto after:right-8",
+  },
+  {
+    quote: "„Bohatší lidi u sebe hotovost běžně nenosí.“",
+    className:
+      "border-indigo-300 bg-indigo-50 text-indigo-950 -rotate-2 sm:col-span-3 sm:col-start-1 sm:justify-self-start sm:text-base sm:-rotate-4 hover:-translate-y-0.5 hover:-rotate-5",
+    tailClassName: "after:left-8",
+  },
+]
+
 const mythReality = [
   {
     myth: "„Kdo nebere karty, určitě obchází daně.“",
@@ -109,6 +184,16 @@ const mythReality = [
       "Je to závěr o systému jako celku, ne důkaz o konkrétním podniku.",
       "Obchodník může karty odmítat kvůli nízké marži, opožděnému připsání peněz, technickým problémům nebo jednoduššímu provozu.",
       "Samotná absence terminálu nestačí. Smysl dává až širší kontext.",
+    ],
+  },
+  {
+    myth: "„Bez terminálu podnik automaticky přichází o tržby.“",
+    whyItSticks:
+      "Z pohledu zákazníka to dává smysl. Když nemůže zaplatit obvyklým způsobem, snadno předpokládá, že obchod zbytečně odmítá peníze i nové zákazníky.",
+    whatItMisses: [
+      "Není to stejné pro každou provozovnu. V malé obci mohou být místní zvyklí na hotovost a zdražení kvůli terminálu by část z nich mohlo od nákupů spíš odradit.",
+      "U sezónního stánku nebo krátkodobého prodeje se náklady na techniku, připojení a obsluhu nemusí vrátit bez citelného zdražení.",
+      "U zavedeného městského podniku může být situace opačná. Smysl terminálu proto závisí na typu provozu, marži, lokalitě i struktuře zákazníků.",
     ],
   },
   {
@@ -132,16 +217,6 @@ const mythReality = [
     ],
   },
   {
-    myth: "„Terminál je jen malá krabička na pult.“",
-    whyItSticks:
-      "Zvenku to tak opravdu vypadá. Zákazník vidí zařízení, přiložení karty a potvrzení.",
-    whatItMisses: [
-      "Za terminálem je další smlouva, připojení, servis, někdy i integrace s pokladnou a řešení výpadků.",
-      "Když vypadne síť nebo poskytovatel, problém dopadne na obchodníka stojícího před zákazníkem.",
-      "U malého provozu je i jeden technický článek navíc reálná provozní komplikace.",
-    ],
-  },
-  {
     myth: "„Když je platba schválená, je všechno vyřešené.“",
     whyItSticks:
       "Schválená platba působí definitivně. Na obrazovce je hotovo a zákazník odchází.",
@@ -149,6 +224,16 @@ const mythReality = [
       "U karet existují spory, zpětná vrácení plateb, vratky a dodatečné úpravy.",
       "Obchodník pak musí zpětně dokládat, že transakce proběhla správně.",
       "I vyhraný spor znamená další čas, administrativu a nejistotu navíc.",
+    ],
+  },
+  {
+    myth: "„Terminál je jen malá krabička na pult.“",
+    whyItSticks:
+      "Zvenku to tak opravdu vypadá. Zákazník vidí zařízení, přiložení karty a potvrzení.",
+    whatItMisses: [
+      "Za terminálem je další smlouva, připojení, servis, někdy i integrace s pokladnou a řešení výpadků.",
+      "Když vypadne síť nebo poskytovatel, problém dopadne na obchodníka stojícího před zákazníkem.",
+      "U malého provozu je i jeden technický článek navíc reálná provozní komplikace.",
     ],
   },
   {
@@ -438,11 +523,12 @@ export default function Page() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_22%,rgba(120,63,30,0.34),transparent_0,transparent_26%),radial-gradient(circle_at_88%_16%,rgba(255,210,153,0.36),transparent_0,transparent_18%),linear-gradient(90deg,rgba(255,249,242,0.96)_0%,rgba(255,249,242,0.9)_34%,rgba(255,249,242,0.62)_56%,rgba(69,36,21,0.34)_100%)]" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0)_20%,rgba(255,248,242,0.7)_100%)]" />
         </div>
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div className="space-y-8">
             <div>
               <p className="-mt-5 mb-9 text-lg font-semibold tracking-[0.18em] text-foreground/80 uppercase sm:-mt-6 sm:mb-10 sm:text-xl">
-                Neplať kartou, <span className="text-orange-700">prosím</span>
+                <span className="text-foreground/45">Prosím, </span>neplať kartou...{" "}
+                <span className="text-orange-700">Děkujeme</span>
               </p>
               <h1
                 className="max-w-4xl text-4xl leading-none tracking-tight text-balance sm:text-5xl lg:text-6xl"
@@ -464,6 +550,12 @@ export default function Page() {
               >
                 Hlavní důvody
                 <ArrowRight className="size-4" />
+              </Link>
+              <Link
+                href="#mylne-zkratky"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-muted"
+              >
+                Mylné domněnky
               </Link>
               <Link
                 href="#detaily"
@@ -498,21 +590,37 @@ export default function Page() {
             </div>
           </div>
 
-            <Card className="overflow-hidden border-border/60 bg-stone-950 text-stone-50 shadow-2xl shadow-orange-950/10">
-            <CardContent className="space-y-6 p-8">
-              <div className="flex items-center gap-3 text-sm text-stone-300">
-                <CreditCard className="size-4" />
-                Co zákazník slyší u pultu
+          <div className="flex flex-col justify-end gap-5 lg:pl-4">
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 text-sm text-foreground/70">
+                <AlertTriangle className="size-4 text-orange-800" />
+                <span className="uppercase tracking-[0.22em]">Poznáváte se?</span>
               </div>
-              <div className="text-3xl leading-tight text-balance" style={displayFont}>
-                „Kartou dnes raději ne. Pokud můžete, zaplaťte hotově nebo pošlete převod.“
-              </div>
-              <p className="text-sm leading-7 text-stone-300">
-                Za touto větou často není snaha něco schovat. Jde jen o to neprodělávat na
-                poplatcích, nečekat na vlastní peníze a nepřidávat si další provozní starosti.
+              <p className="max-w-md text-sm leading-6 text-muted-foreground">
+                Možná jen nemáte představu, co všechno se za akceptováním plateb kartou skrývá.
+                Nevadí. Jste na správném místě.
               </p>
-            </CardContent>
-          </Card>
+            </div>
+            <div className="grid items-start gap-4 sm:grid-cols-6 lg:gap-5">
+              {customerReactions.map(({ quote, className, tailClassName }) => (
+                <div
+                  key={quote}
+                  className={`relative max-w-full rounded-[1.7rem] border px-4 py-3 text-xs leading-5 font-medium shadow-md transition-transform duration-300 ease-out will-change-transform after:absolute after:-bottom-[0.42rem] after:size-3.5 after:rotate-45 after:border-r after:border-b after:border-inherit after:bg-inherit after:content-[''] sm:max-w-[18rem] sm:text-sm ${tailClassName} ${className}`}
+                >
+                  {quote}
+                </div>
+              ))}
+            </div>
+            <div className="pt-3 sm:pt-5">
+              <Link
+                href="#mylne-zkratky"
+                className="inline-flex items-center gap-2 text-sm font-medium text-orange-800 transition-colors hover:text-orange-950"
+              >
+                Proč tyto zkratky často neplatí
+                <ArrowRight className="size-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -609,7 +717,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="px-4 py-20">
+      <section id="mylne-zkratky" className="px-4 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl space-y-4">
             <SectionKicker>Mylné zkratky</SectionKicker>

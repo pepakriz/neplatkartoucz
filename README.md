@@ -1,30 +1,65 @@
 # NeplaťKartou.cz
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Obsahový web postavený na Next.js 16 a Tailwind CSS. Vysvětluje, proč část obchodníků dává přednost hotovosti nebo převodu před platbou kartou a proč samotná absence terminálu nic automaticky nedokazuje.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/josef-ks-projects/v0-credit-card-payment-arguments)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/lcn39TmigtV)
+## Stack
 
-## Overview
+- Next.js App Router
+- React 19
+- Tailwind CSS 4
+- Vercel Web Analytics
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Lokální vývoj
 
-## Deployment
+```bash
+bun install
+bun run dev
+```
 
-Your project is live at:
+## Skripty
 
-**[https://vercel.com/josef-ks-projects/neplatkartoucz](https://vercel.com/josef-ks-projects/v0-credit-card-payment-arguments)**
+```bash
+bun run check
+bun run build
+bun run start
+```
 
-## Build your app
+`check` zůstává oddělený od produkčního buildu. `build` proto nekončí na TypeScript chybách, pokud jsou v `next.config.mjs` záměrně povolené.
 
-Continue building your app on:
+## Produkční konfigurace
 
-**[https://v0.app/chat/lcn39TmigtV](https://v0.app/chat/lcn39TmigtV)**
+Nastav před nasazením:
 
-## How It Works
+- `NEXT_PUBLIC_SITE_URL`
+  Používá se pro canonical URL, `metadataBase`, sitemap a robots. Mělo by jít o finální veřejnou doménu, například `https://neplatkartou.cz`.
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## Co je v repu navíc oproti původnímu scaffoldu
+
+- `app/robots.ts` a `app/sitemap.ts`
+- `app/manifest.ts`
+- `app/opengraph-image.tsx` a `app/twitter-image.tsx`
+- `app/metodika/page.tsx`
+- `app/soukromi/page.tsx`
+- základní security headers v `next.config.mjs`
+- custom event tracking pro CTA a scroll depth
+
+## Obsah a důvěryhodnost
+
+- Hlavní argumenty jsou na homepage, podrobnější rozbalené sekce odkazují na zdroje.
+- Metodika a transparentnost jsou na `/metodika`.
+- Soukromí a měření jsou na `/soukromi`.
+- Kontakt a opravy vedou přes GitHub issues, aby byl vidět i kontext změn.
+
+## Nasazení
+
+Projekt je připravený pro Vercel nebo jiný hosting podporující Next.js produkční build.
+
+Na Vercelu:
+
+1. nastav `NEXT_PUBLIC_SITE_URL`
+2. zapni Vercel Web Analytics
+3. nasaď `bun run build`
+
+## Poznámka k obsahu
+
+Web není právní ani daňové poradenství. Jde o redakčně zpracovaný souhrn zdrojů, regulace a provozních argumentů z pohledu obchodníka.

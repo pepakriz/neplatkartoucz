@@ -1,4 +1,4 @@
-import Link from "next/link"
+import type { Metadata } from "next"
 import Image from "next/image"
 import {
   AlertTriangle,
@@ -19,8 +19,30 @@ import {
   Wrench,
 } from "lucide-react"
 
+import { PageEngagementTracker } from "@/components/page-engagement-tracker"
+import { TrackedLink } from "@/components/tracked-link"
 import { Accordion } from "@/components/ui/accordion"
 import { Card, CardContent } from "@/components/ui/card"
+import { formatCzechDate, siteConfig } from "@/lib/site"
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `${siteConfig.name} | ${siteConfig.homeTitle}`,
+  },
+  description: siteConfig.description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: `${siteConfig.name} | ${siteConfig.homeTitle}`,
+    description: siteConfig.description,
+    url: "/",
+  },
+  twitter: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+  },
+}
 
 const displayFont = {
   fontFamily: '"Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif',
@@ -515,8 +537,44 @@ function SectionKicker({ children }: { children: React.ReactNode }) {
 }
 
 export default function Page() {
+  const lastUpdatedLabel = formatCzechDate(siteConfig.updatedAt)
+  const homeStructuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: siteConfig.shortName,
+      url: siteConfig.siteUrl,
+      inLanguage: "cs",
+      description: siteConfig.description,
+      publisher: {
+        "@type": "Organization",
+        name: siteConfig.ownerName,
+        url: siteConfig.siteUrl,
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: siteConfig.name,
+      description: siteConfig.description,
+      url: siteConfig.siteUrl,
+      inLanguage: "cs",
+      dateModified: siteConfig.updatedAt,
+      isPartOf: {
+        "@type": "WebSite",
+        name: siteConfig.shortName,
+        url: siteConfig.siteUrl,
+      },
+    },
+  ]
+
   return (
     <main className="relative overflow-hidden bg-background text-foreground">
+      <PageEngagementTracker page="homepage" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeStructuredData) }}
+      />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(236,72,39,0.16),_transparent_34%),radial-gradient(circle_at_85%_12%,_rgba(245,158,11,0.18),_transparent_22%),linear-gradient(180deg,_rgba(250,246,240,0.92),_rgba(255,255,255,1)_36%,_rgba(248,244,236,0.75)_100%)]" />
 
       <section className="relative overflow-hidden border-b border-border/60 px-4 pb-16 pt-10 sm:pt-14">
@@ -574,25 +632,31 @@ export default function Page() {
               </p>
 
               <div className="flex flex-wrap gap-3">
-                <Link
+                <TrackedLink
                   href="#hlavni-duvody"
+                  eventName="internal_navigation_click"
+                  eventProperties={{ location: "hero", target: "main_reasons" }}
                   className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
                 >
                   Hlavní důvody
                   <ArrowRight className="size-4" />
-                </Link>
-                <Link
+                </TrackedLink>
+                <TrackedLink
                   href="#mylne-zkratky"
+                  eventName="internal_navigation_click"
+                  eventProperties={{ location: "hero", target: "myths" }}
                   className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-muted"
                 >
                   Mylné domněnky
-                </Link>
-                <Link
+                </TrackedLink>
+                <TrackedLink
                   href="#detaily"
+                  eventName="internal_navigation_click"
+                  eventProperties={{ location: "hero", target: "details" }}
                   className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-muted"
                 >
                   Detaily a zdroje
-                </Link>
+                </TrackedLink>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-3">
@@ -682,13 +746,15 @@ export default function Page() {
                 ))}
               </div>
               <div className="pt-3 sm:pt-5">
-                <Link
+                <TrackedLink
                   href="#mylne-zkratky"
+                  eventName="internal_navigation_click"
+                  eventProperties={{ location: "reactions_panel", target: "myths" }}
                   className="inline-flex items-center gap-2 text-sm font-medium text-orange-800 transition-colors hover:text-orange-950"
                 >
                   Proč tyto zkratky často neplatí
                   <ArrowRight className="size-4" />
-                </Link>
+                </TrackedLink>
               </div>
             </div>
           </div>
@@ -887,16 +953,18 @@ export default function Page() {
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {section.sources.map(([label, href]) => (
-                            <a
+                            <TrackedLink
                               key={href}
                               href={href}
                               target="_blank"
-                              rel="noreferrer"
+                              rel="noopener noreferrer"
+                              eventName="outbound_click"
+                              eventProperties={{ location: "detail_sources", section: section.value, label }}
                               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
                             >
                               {label}
                               <ArrowRight className="size-3.5" />
-                            </a>
+                            </TrackedLink>
                           ))}
                         </div>
                       </div>
@@ -1107,30 +1175,119 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="border-t border-border/60 bg-[rgba(248,244,236,0.45)] px-4 py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="space-y-4">
+            <SectionKicker>Transparentnost</SectionKicker>
+            <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
+              Jak s obsahem pracujeme, jak ho opravovat a jaké minimum měříme.
+            </h2>
+            <p className="text-lg leading-8 text-muted-foreground">
+              Text stojí na veřejně dostupných zdrojích, které jsou průběžně doplňované a
+              revidované. Kde jde o interpretaci, snažíme se ji oddělit od faktu. Poslední větší
+              revize obsahu proběhla <strong className="font-semibold text-foreground">{lastUpdatedLabel}</strong>.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            <Card className="border-border/70 bg-background/90 py-0 shadow-sm">
+              <CardContent className="space-y-4 p-6">
+                <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
+                  Jak vzniká obsah
+                </div>
+                <h3 className="text-xl font-semibold leading-tight">Metodika a transparentnost</h3>
+                <p className="text-sm leading-7 text-muted-foreground">
+                  Vysvětlujeme, z čeho projekt vychází, co považujeme za fakt a kudy vede oprava
+                  nepřesností.
+                </p>
+                <TrackedLink
+                  href="/metodika"
+                  eventName="internal_navigation_click"
+                  eventProperties={{ location: "transparency_cards", target: "methodology" }}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-orange-800 transition-colors hover:text-orange-950"
+                >
+                  Otevřít metodiku
+                  <ArrowRight className="size-4" />
+                </TrackedLink>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/70 bg-background/90 py-0 shadow-sm">
+              <CardContent className="space-y-4 p-6">
+                <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
+                  Kontakt a opravy
+                </div>
+                <h3 className="text-xl font-semibold leading-tight">Pošli chybu nebo vlastní příběh</h3>
+                <p className="text-sm leading-7 text-muted-foreground">
+                  Preferujeme veřejné issue nebo pull request, aby byl vidět i kontext a následná
+                  oprava.
+                </p>
+                <TrackedLink
+                  href={siteConfig.issuesUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  eventName="outbound_click"
+                  eventProperties={{ location: "transparency_cards", target: "issues" }}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-orange-800 transition-colors hover:text-orange-950"
+                >
+                  Napište nám přes GitHub
+                  <ArrowRight className="size-4" />
+                </TrackedLink>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/70 bg-background/90 py-0 shadow-sm">
+              <CardContent className="space-y-4 p-6">
+                <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
+                  Soukromí a měření
+                </div>
+                <h3 className="text-xl font-semibold leading-tight">Co web měří a co nesbírá</h3>
+                <p className="text-sm leading-7 text-muted-foreground">
+                  Používáme jen základní analytiku návštěvnosti a kliků. Bez remarketingu, bez
+                  newsletteru a bez vlastního formuláře.
+                </p>
+                <TrackedLink
+                  href="/soukromi"
+                  eventName="internal_navigation_click"
+                  eventProperties={{ location: "transparency_cards", target: "privacy" }}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-orange-800 transition-colors hover:text-orange-950"
+                >
+                  Otevřít zásady soukromí
+                  <ArrowRight className="size-4" />
+                </TrackedLink>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <footer className="border-t border-border/60 px-4 py-8">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-end gap-4 text-sm text-muted-foreground">
-          <Link
-            href="https://github.com/pepakriz/neplatkartoucz/issues/new"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
-          >
-            Napište nám vlastní příběh
-            <ArrowRight className="size-4" />
-          </Link>
-          <Link
-            href="https://github.com/pepakriz/neplatkartoucz"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
-          >
-            Zdrojový kód na GitHubu
-            <ArrowRight className="size-4" />
-          </Link>
-          <Link href="#detaily" className="inline-flex items-center gap-2 font-medium text-foreground">
-            Otevřít podrobné argumenty
-            <ArrowRight className="size-4" />
-          </Link>
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+          <div>
+            {siteConfig.shortName} • poslední obsahová revize {lastUpdatedLabel}
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <TrackedLink
+              href="#detaily"
+              eventName="internal_navigation_click"
+              eventProperties={{ location: "footer", target: "details" }}
+              className="inline-flex items-center gap-2 font-medium text-foreground transition-colors hover:text-orange-900"
+            >
+              Otevřít podrobné argumenty
+              <ArrowRight className="size-4" />
+            </TrackedLink>
+            <TrackedLink
+              href={siteConfig.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              eventName="outbound_click"
+              eventProperties={{ location: "footer", target: "repository" }}
+              className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
+            >
+              Zdrojový kód na GitHubu
+              <ArrowRight className="size-4" />
+            </TrackedLink>
+          </div>
         </div>
       </footer>
     </main>

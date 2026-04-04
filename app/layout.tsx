@@ -1,25 +1,40 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
+
+import { siteConfig } from "@/lib/site"
+
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Prosím, neplať kartou | Když chceme hotovost nebo převod",
-  description:
-    "Web vysvětluje, proč část obchodníků dává přednost hotovosti nebo převodu před platbou kartou a proč to samo o sobě neznamená nic nepoctivého.",
-  applicationName: "Prosím, neplať kartou",
+  metadataBase: new URL(siteConfig.siteUrl),
+  title: {
+    default: `${siteConfig.name} | ${siteConfig.homeTitle}`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  manifest: "/manifest.webmanifest",
+  keywords: [...siteConfig.keywords],
+  authors: [
+    {
+      name: siteConfig.ownerName,
+      url: siteConfig.repoUrl,
+    },
+  ],
+  creator: siteConfig.ownerName,
+  publisher: siteConfig.ownerName,
   openGraph: {
-    title: "Prosím, neplať kartou",
-    description:
-      "Pohled obchodníka na poplatky, čekání na peníze, spory, technické závislosti a další důvody, proč část podniků nechce upřednostňovat platbu kartou.",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.shortName,
     type: "website",
-    locale: "cs_CZ",
+    locale: siteConfig.locale,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prosím, neplať kartou",
-    description:
-      "Proč část obchodníků raději bere hotovost nebo převod než platbu kartou.",
+    title: siteConfig.name,
+    description: siteConfig.description,
   },
   icons: {
     icon: [

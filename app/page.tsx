@@ -51,7 +51,7 @@ const displayFont = {
 const keyReasons = [
   {
     icon: DollarSign,
-    title: "Náklady nese obchodník",
+    title: "Poplatky platíme my",
     description:
       "Ve veřejné debatě se mluví hlavně o stropech 0,2 % a 0,3 %. To je ale jen část ceny. Ve skutečnosti platíme i další poplatky a marže zprostředkovatelů.",
   },
@@ -63,39 +63,39 @@ const keyReasons = [
   },
   {
     icon: Clock,
-    title: "Peníze nedorazí hned",
+    title: "Peníze nemáme hned",
     description:
       "Hotovost máme hned. U karet mohou peníze dorazit až později, po odečtení poplatků, vratek nebo reklamací. Část peněz navíc může být dočasně zadržena.",
   },
   {
     icon: Shield,
-    title: "I zaplacený prodej se může vrátit do sporu",
+    title: "I zaplacený prodej se nám může vrátit do řešení",
     description:
-      "Když zákazník platbu napadne, může se transakce vrátit do řešení. Obchodník pak musí dokládat, že nákup proběhl správně, a nese další práci i náklady.",
+      "Když zákazník platbu napadne, může se transakce znovu otevřít. My pak musíme dokládat, že nákup proběhl správně, a stojí nás to další práci i náklady.",
   },
   {
     icon: FileSignature,
-    title: "Pravidla a ceníky neurčuje obchodník",
+    title: "Pravidla a ceníky neurčujeme my",
     description:
       "Podmínky určují karetní společnosti a poskytovatelé plateb. Cena se může lišit podle druhu karty, země vydání nebo typu prodeje.",
   },
   {
     icon: Wrench,
-    title: "Terminál znamená další techniku",
+    title: "Terminál je další zařízení v provozu",
     description:
-      "Terminál je další zařízení, které potřebuje připojení, servis a někdy i napojení na pokladnu. Když vypadne internet nebo signál, problém má obchodník.",
+      "Terminál je další zařízení, které potřebuje připojení, servis a někdy i napojení na pokladnu. Když vypadne internet nebo signál, problém máme my.",
   },
   {
     icon: CreditCard,
-    title: "Cena se mění podle typu karty",
+    title: "Poplatek se nám liší podle karty",
     description:
-      "Jiný náklad může mít běžná debetní karta, jiný firemní, prémiová nebo zahraniční karta. Obchodník často dopředu přesně neví, kolik konkrétní platba opravdu bude stát.",
+      "Jiný náklad může mít běžná debetní karta, jiný firemní, prémiová nebo zahraniční karta. Často dopředu přesně nevíme, kolik konkrétní platba opravdu bude stát.",
   },
   {
     icon: Landmark,
     title: "Část peněz může být zadržena",
     description:
-      "Poskytovatel si může část tržeb ponechat jako rezervu na budoucí reklamace nebo vratky. U malého podniku to může nepříjemně zhoršit peněžní tok.",
+      "Poskytovatel si může část tržeb ponechat jako rezervu na budoucí reklamace nebo vratky. V malém provozu nám to může citelně zhoršit provozní hotovost.",
   },
   {
     icon: DollarSign,
@@ -107,7 +107,7 @@ const keyReasons = [
     icon: Shield,
     title: "Některé obory mají horší podmínky",
     description:
-      "Rizikovější obory mohou dostat vyšší ceny, přísnější smlouvy, rezervy nebo jim může být přijímání karet úplně zamítnuto.",
+      "V rizikovějších oborech nám mohou poskytovatelé nabídnout vyšší ceny, přísnější smlouvy, rezervy, nebo přijímání karet rovnou odmítnout.",
   },
   {
     icon: FileText,
@@ -117,9 +117,9 @@ const keyReasons = [
   },
   {
     icon: Database,
-    title: "Data o nákupech nekončí jen u obchodu",
+    title: "Data o nákupech nezůstávají jen u nás",
     description:
-      "Kartová platba vytváří datovou stopu, která má hodnotu pro analytiku, marketing i další služby. Obchodník tak řeší i soukromí a bezpečnost.",
+      "Kartová platba vytváří datovou stopu, která má hodnotu pro analytiku, marketing i další služby. My pak řešíme i soukromí a bezpečnost.",
   },
 ]
 
@@ -204,8 +204,8 @@ const mythReality = [
     whyItSticks:
       "Bezhotovostní platby po sobě opravdu zanechávají lépe dohledatelnou stopu a stát je často spojuje s větší transparentností.",
     whatItMisses: [
-      "To může něco říkat o systému jako celku, ale samo o sobě to nic nedokazuje o konkrétním podniku bez terminálu.",
-      "Vedle toho existují i úplně běžné důvody: nízké marže, pozdější připsání peněz, zadržení části tržby jako rezerva, reklamace plateb, slabý signál nebo prostší provoz hotovosti a převodu.",
+      "To může něco říkat o systému jako celku, ale samo o sobě to nic nedokazuje o konkrétním provozu bez terminálu.",
+      "Vedle toho existují i úplně běžné důvody: nízké marže, pozdější připsání peněz, zadržení části tržby jako rezerva, reklamace plateb, slabý signál nebo jednodušší provoz s hotovostí a převodem.",
       "Samotná absence terminálu proto nestačí. Smysl dává až širší kontext provozu, cen, lokality a způsobu evidence tržeb.",
     ],
   },
@@ -216,7 +216,7 @@ const mythReality = [
     whatItMisses: [
       "Není to stejné pro každou provozovnu. V malé obci mohou být místní zvyklí na hotovost a zdražení kvůli terminálu by část z nich spíš odradilo.",
       "U sezónního stánku nebo krátkodobého prodeje se náklady na techniku, připojení, servis a další administrativu nemusí vrátit bez citelného zdražení.",
-      "Smysl terminálu proto vždy závisí na marži, obratu, lokalitě, spolehlivosti připojení i skladbě zákazníků.",
+      "Smysl terminálu proto vždy závisí na naší marži, obratu, lokalitě, spolehlivosti připojení i na tom, jak u nás zákazníci obvykle platí.",
     ],
   },
   {
@@ -225,17 +225,17 @@ const mythReality = [
       "Ve veřejné debatě se často opakují evropské stropy 0,2 % a 0,3 %, takže to snadno působí jako celá cena karetní platby.",
     whatItMisses: [
       "Stropy 0,2 % a 0,3 % se týkají jen jedné části poplatku a jen části běžných spotřebitelských karet v Evropě.",
-      "Skutečný náklad obchodníka zahrnuje i další poplatky karetním společnostem, marži poskytovatele, terminál, vratky plateb a další položky.",
-      "U firemních, zahraničních, internetových nebo rizikovějších plateb může být reálný náklad obchodníka výrazně vyšší než veřejně opakovaná čísla.",
+      "Náš skutečný náklad zahrnuje i další poplatky karetním společnostem, marži poskytovatele, terminál, vratky plateb a další položky.",
+      "U firemních, zahraničních, internetových nebo rizikovějších plateb může být náš reálný náklad výrazně vyšší než často opakovaná čísla.",
     ],
   },
   {
-    myth: "„Kartou dostanete peníze okamžitě stejně jako v hotovosti.“",
+    myth: "„Peníze z karty máte hned stejně jako hotovost.“",
     whyItSticks:
-      "Zákazník vidí schválenou transakci okamžitě a snadno si to splete s tím, že obchodník má peníze také hned.",
+      "Zákazník vidí schválenou transakci okamžitě a snadno si to splete s tím, že peníze máme také hned.",
     whatItMisses: [
-      "Schválení platby, zúčtování a skutečné připsání peněz jsou tři různé okamžiky. Zákazník vidí první, obchodník čeká na poslední.",
-      "Na účet často dorazí až čistá částka po odečtení poplatků, vratek a úprav spojených se spory o platbu, ne celá utracená suma.",
+      "Schválení platby, zúčtování a skutečné připsání peněz jsou tři různé okamžiky. Zákazník vidí první, my čekáme na poslední.",
+      "Na účet často dorazí až čistá částka po odečtení poplatků, vratek a úprav spojených se spory o platbu, ne celá zaplacená částka.",
       "Poskytovatel navíc může část peněz zadržet jako rezervu nebo připsání peněz zpozdit kvůli svému vyhodnocení rizik.",
     ],
   },
@@ -244,9 +244,9 @@ const mythReality = [
     whyItSticks:
       "Schválená platba působí definitivně. Na obrazovce je hotovo a zákazník odchází.",
     whatItMisses: [
-      "Ve světě karetních plateb schválení neznamená definitivní konec. Existují spory, zpětné vrácení plateb, záměna plateb na výpisu i takzvané přátelské podvody.",
-      "Obchodník pak musí zpětně dokládat, že transakce proběhla správně, a často nese i další poplatky a administrativní zátěž.",
-      "I vyhraný spor stojí čas a energii a zhoršuje jistotu peněžního toku i celkové hodnocení rizika podniku.",
+      "U karetních plateb schválení neznamená definitivní konec. Existují spory, dodatečné vrácení plateb, záměna plateb na výpisu i případy, kdy zákazník platbu popře, přestože zboží nebo službu dostal.",
+      "My pak musíme zpětně dokládat, že transakce proběhla správně, a často neseme i další poplatky a administrativní zátěž.",
+      "I vyhraný spor stojí čas a energii a zhoršuje jistotu, kdy své peníze opravdu dostaneme.",
     ],
   },
   {
@@ -256,17 +256,17 @@ const mythReality = [
     whatItMisses: [
       "Za terminálem je smlouva, připojení, servis, někdy i propojení s pokladnou, školení obsluhy a řešení výpadků.",
       "Slabý signál nebo nestabilní internet navíc v některých provozech nejsou výmluva, ale reálný problém.",
-      "Když vypadne síť, terminál nebo poskytovatel, reputační škodu u pultu nenese karetní síť, ale obchodník stojící před zákazníkem.",
+      "Když vypadne síť, terminál nebo poskytovatel, reputační škodu u pultu nenese karetní síť. Neseme ji my, protože stojíme před zákazníkem.",
     ],
   },
   {
-    myth: "„Kartou se řeší jen platba, nic víc.“",
+    myth: "„U karty jde jen o zaplacení, nic víc.“",
     whyItSticks:
-      "V běžné řeči se karta popisuje jen jako pohodlný způsob, jak přesunout peníze od zákazníka k obchodníkovi.",
+      "V běžné řeči se karta popisuje jen jako pohodlný způsob, jak přesunout peníze od zákazníka k nám.",
     whatItMisses: [
-      "S platbou vzniká i datový záznam o čase, místě, částce a typu nákupu, který prochází přes více článků celé infrastruktury.",
-      "Nejde jen o samotné zúčtování, ale i o vyhodnocování rizik, srovnávací přehledy, analytické a marketingové produkty nad souhrnnými daty.",
-      "Vedle platební vrstvy tak vzniká i další datová a bezpečnostní vrstva, kterou obchodník musí nést, aniž by ji plně řídil.",
+      "S platbou vzniká i datový záznam o čase, místě, částce a typu nákupu, který prochází přes několik dalších firem a systémů.",
+      "Nejde jen o samotné zúčtování. Data se používají také k vyhodnocování rizik, srovnávání, analýzám a marketingovým službám nad souhrnnými daty.",
+      "Vedle samotného placení tak vznikají i další otázky kolem dat a bezpečnosti. Musíme je řešit, i když celý systém plně neřídíme.",
     ],
   },
 ]
@@ -274,26 +274,26 @@ const mythReality = [
 const detailSections = [
   {
     value: "fees",
-    title: "Poplatky nejsou jedna jednoduchá sazba",
+    title: "Poplatky nejsou jen jedna sazba",
     intro:
       "Když se mluví o evropských stropech, může to působit, že karta stojí skoro nic. Obchodník ale neplatí jednu malou sazbu. Platí celou sadu poplatků.",
     bullets: [
       "Stropy 0,2 % a 0,3 % platí jen pro část běžných spotřebitelských karet.",
-      "Do konečné ceny vstupují i poplatky karetním schématům a marže firmy, která platbu zpracuje.",
+      "Do konečné ceny vstupují i poplatky karetním asociacím a marže firmy, která platbu zpracuje.",
       "Firemní, zahraniční a internetové platby bývají dražší.",
       "I proto EU nařídila, aby poskytovatelé poplatky rozepisovali přehledněji.",
     ],
     sources: [
       ["EU IFR 2015/751", "https://eur-lex.europa.eu/eli/reg/2015/751/oj/eng"],
-      ["Mastercard Europe interchange hub", "https://www.mastercard.com/europe/en/regulatory/european-interchange.html"],
-      ["Visa commitments k inter-regionálním MIF", "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A52019XC0904%2801%29"],
+      ["Mastercard: mezibankovní poplatky v Evropě", "https://www.mastercard.com/europe/en/regulatory/european-interchange.html"],
+      ["Závazky Visa k meziregionálním poplatkům", "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A52019XC0904%2801%29"],
     ],
   },
   {
     value: "cashflow",
     title: "Peníze z karty nejsou totéž co hotovost v kase",
     intro:
-      "Pro malý podnik je důležité, kdy peníze skutečně dorazí. U karty se prodej sice ukáže hned, ale peníze mohou přijít později a už snížené o další položky.",
+      "Pro malý provoz je důležité, kdy peníze skutečně dorazí. U karty se prodej sice ukáže hned, ale peníze nám mohou přijít později a už snížené o další položky.",
     bullets: [
       "Sami poskytovatelé uvádějí, že výplata peněz běžně chodí až po jednom nebo více dnech.",
       "Na účet často přijde už jen čistá částka po odečtení poplatků, vratek a reklamací.",
@@ -301,10 +301,10 @@ const detailSections = [
       "V krajním případě může být další výplata nulová nebo dokonce záporná.",
     ],
     sources: [
-      ["Stripe payouts", "https://docs.stripe.com/treasury/moving-money/payouts"],
-      ["Stripe first payout delay", "https://support.stripe.com/questions/waiting-on-your-first-stripe-payout-what-you-need-to-know?locale=en-GB"],
-      ["Adyen next payout", "https://docs.adyen.com/account/balances/next-payout"],
-      ["Square reserves FAQ", "https://squareup.com/help/us/en/article/6832-reserves-faq"],
+      ["Stripe: výplaty", "https://docs.stripe.com/treasury/moving-money/payouts"],
+      ["Stripe: první výplata", "https://support.stripe.com/questions/waiting-on-your-first-stripe-payout-what-you-need-to-know?locale=en-GB"],
+      ["Adyen: příští výplata", "https://docs.adyen.com/account/balances/next-payout"],
+      ["Square: rezervy", "https://squareup.com/help/us/en/article/6832-reserves-faq"],
     ],
   },
   {
@@ -319,20 +319,20 @@ const detailSections = [
       "Vratky a další úpravy se objevují zpětně, takže přibývá párování a administrativa.",
     ],
     sources: [
-      ["Visa chargebacks", "https://corporate.visa.com/en/solutions/acceptance/chargebacks.html"],
+      ["Visa: spory o platby", "https://corporate.visa.com/en/solutions/acceptance/chargebacks.html"],
       ["Visa Order Insight", "https://corporate.visa.com/en/products/order-insight.html"],
-      ["Adyen insufficient in-process funds", "https://help.adyen.com/knowledge/payments/refunds/what-does-insufficient-inprocess-funds-mean/"],
+      ["Adyen: nedostatek prostředků na vrácení platby", "https://help.adyen.com/knowledge/payments/refunds/what-does-insufficient-inprocess-funds-mean/"],
     ],
   },
   {
     value: "operations",
     title: "Terminál, připojení, výpadky a smlouvy",
     intro:
-      "Přijímat karty neznamená jen položit na pult terminál. Znamená to i další techniku, další smlouvy a závislost na službách, které obchodník neřídí.",
+      "Přijímat karty neznamená jen položit na pult terminál. Znamená to i další techniku, další smlouvy a závislost na službách, které neřídíme.",
     bullets: [
       "Terminál je potřeba pořídit nebo pronajmout, připojit, servisovat a někdy napojit na pokladnu.",
       "V některých provozech je problém slabý signál nebo nestabilní internet.",
-      "Když vypadne síť nebo platební služba, zákazník stojí u pultu a obchodník neprodá.",
+      "Když vypadne síť nebo platební služba, zákazník stojí u pultu a my neprodáme.",
       "Regulátoři už řešili i firmy, které malým podnikům účtovaly skryté poplatky nebo komplikovaly odchod ze smlouvy.",
     ],
     sources: [
@@ -366,13 +366,13 @@ const detailSections = [
     bullets: [
       "Ekonomické studie opravdu ukazují, že více bezhotovostních plateb může v celé ekonomice zmenšovat prostor pro daňové úniky.",
       "Veřejná politika někdy výslovně spojuje omezení hotovosti s bojem proti daňovým únikům.",
-      "To ale pořád nic nedokazuje o konkrétním obchodníkovi bez terminálu.",
+      "To ale pořád nic nedokazuje o konkrétním provozu bez terminálu.",
       "Zároveň i Evropská centrální banka uvádí, že firmy hodnotí hotovost jako levnější, spolehlivější a soukromější.",
     ],
     sources: [
-      ["ZEW: Cashless payments and tax evasion", "https://www.zew.de/en/publications/cashless-payments-and-tax-evasion-evidence-from-vat-gaps-in-the-eu"],
-      ["European Commission FAQ k cash legal tender", "https://finance.ec.europa.eu/digital-finance/digital-euro/frequently-asked-questions-digital-euro-and-legal-tender-cash_en"],
-      ["ECB: Use of cash by companies in the euro area", "https://www.ecb.europa.eu/stats/ecb_surveys/use_of_cash_by_companies_in_the_euro_area/html/index.el.html"],
+      ["ZEW: bezhotovostní platby a daňové úniky", "https://www.zew.de/en/publications/cashless-payments-and-tax-evasion-evidence-from-vat-gaps-in-the-eu"],
+      ["Evropská komise: hotovost jako zákonné platidlo", "https://finance.ec.europa.eu/digital-finance/digital-euro/frequently-asked-questions-digital-euro-and-legal-tender-cash_en"],
+      ["ECB: hotovost ve firmách eurozóny", "https://www.ecb.europa.eu/stats/ecb_surveys/use_of_cash_by_companies_in_the_euro_area/html/index.el.html"],
     ],
   },
 ]
@@ -386,15 +386,15 @@ const dataFlow = [
   },
   {
     step: "2",
-    title: "Data tečou přes další články",
+    title: "Data putují přes další články",
     description:
-      "Data necestují jen mezi obchodníkem a zákazníkem, ale i přes firmu nebo banku, která platbu přijímá, karetní schéma, banku, která kartu vydala, a další zprostředkovatele.",
+      "Data necestují jen mezi námi a zákazníkem, ale i přes firmu nebo banku, která platbu přijímá, karetní asociaci, banku, která kartu vydala, a další zprostředkovatele.",
   },
   {
     step: "3",
     title: "Vznikají vyhodnocení a srovnání",
     description:
-      "Tatáž data slouží k vyhodnocení rizik, odhalování podvodů, reportům, srovnávacím přehledům a obchodním analýzám.",
+      "Tatáž data slouží k vyhodnocení rizik, odhalování podvodů, přehledům, srovnávání a obchodním analýzám.",
   },
   {
     step: "4",
@@ -407,8 +407,8 @@ const dataFlow = [
 const dataClarifications = [
   "Kartová data nejsou jen vedlejší technický záznam. Mají i samostatnou obchodní hodnotu.",
   "Visa, Mastercard i specializované firmy popisují produkty postavené na agregovaných a anonymizovaných transakčních datech.",
-  "Netvrdíme, že někdo veřejně prodává komukoli syrový seznam jmen a nákupů.",
-  "Tvrdíme, že z transakčních dat vznikají analytické, marketingové a poradenské produkty, které jdou daleko za hranici samotného zúčtování platby.",
+  "Netvrdíme, že někdo veřejně prodává komukoli seznam jmen a konkrétních nákupů.",
+  "Tvrdíme, že z transakčních dat vznikají analytické, marketingové a poradenské produkty, které přesahují samotné zúčtování platby.",
 ]
 
 const merchantBarriers = [
@@ -422,7 +422,7 @@ const merchantBarriers = [
     icon: Landmark,
     title: "Potřeba hotovosti pro provoz",
     description:
-      "Hotovost je k dispozici hned. U karetní platby může obchodník na své peníze čekat a ještě o část z nich přijít po cestě.",
+      "Hotovost je k dispozici hned. U karetní platby můžeme na své peníze čekat a ještě o část z nich přijít po cestě.",
   },
   {
     icon: RadioTower,
@@ -434,25 +434,25 @@ const merchantBarriers = [
     icon: FileSignature,
     title: "Smluvní a poplatková složitost",
     description:
-      "Malý podnik často nechce řešit další ceníky, rezervy, dodatky, reklamace a podmínky odchodu ze smlouvy.",
+      "V malém provozu často nechceme řešit další ceníky, rezervy, dodatky, reklamace a podmínky odchodu ze smlouvy.",
   },
 ]
 
 const securityCases = [
   {
-    title: "Platební infrastruktura zvětšuje útokovou plochu",
+    title: "Platební infrastruktura přidává další slabá místa",
     description:
       "Přijímat karty neznamená jen nabídnout pohodlnější způsob placení. Znamená to i další bezpečnostní vrstvu a další povinnosti.",
   },
   {
     title: "Velké úniky dat ukazují, že to není teorie",
     description:
-      "Incidenty u velkých firem ukazují, že platební data jsou cenný cíl a že i robustní infrastruktura může selhat.",
+      "Incidenty u velkých firem ukazují, že platební data jsou cenný cíl a že i dobře zabezpečené systémy mohou selhat.",
   },
   {
     title: "Malý obchod to vnímá jako další riziko navíc",
     description:
-      "Vedle nákladů, sporů a techniky přibývá i otázka, nakolik chce podnik vstupovat do dalšího bezpečnostně citlivého systému.",
+      "Vedle nákladů, sporů a techniky přibývá i otázka, nakolik chceme vstupovat do dalšího systému citlivého na bezpečnost dat.",
   },
 ]
 
@@ -467,20 +467,20 @@ const alternatives = [
     icon: Landmark,
     title: "Bankovní převod",
     description:
-      "Dobře se páruje k fakturám, nejde přes karetní společnosti a nepřidává stejnou vrstvu sporů a dalších poplatků.",
+      "Dobře se nám páruje k fakturám, nejde přes karetní společnosti a nepřináší stejný typ sporů a dalších poplatků.",
   },
   {
     icon: Bitcoin,
     title: "Bitcoin",
     description:
-      "Pokud ho obchodník přijímá, může spojovat výhodu přímého přijetí peněz s možností zaplatit na dálku. Zároveň nejde přes karetní infrastrukturu.",
+      "Pokud ho přijímáme, můžeme spojit přímé přijetí peněz s možností zaplatit na dálku. Zároveň nejde přes karetní infrastrukturu.",
   },
 ]
 
 const comparisonColumns = [
-  { key: "settlement", label: "Kdy má obchodník peníze" },
-  { key: "disputes", label: "Riziko zpětného sporu" },
-  { key: "dependency", label: "Závislost na síti a třetích stranách" },
+  { key: "settlement", label: "Kdy máme peníze" },
+  { key: "disputes", label: "Riziko dodatečného sporu" },
+  { key: "dependency", label: "Závislost na technice a třetích stranách" },
   { key: "accounting", label: "Složitost párování" },
   { key: "data", label: "Datová stopa" },
 ] as const
@@ -491,7 +491,7 @@ const paymentComparison = [
     icon: CreditCard,
     accent: "text-orange-900 bg-orange-100",
     settlement: "Často až později a už po odečtení dalších položek.",
-    disputes: "Vyšší. Spor nebo zpětné vrácení platby může přijít i dodatečně.",
+    disputes: "Vyšší. Zákazník nám může platbu napadnout i dodatečně.",
     dependency: "Vysoká. Terminál, síť, poskytovatel i karetní infrastruktura musí fungovat.",
     accounting: "Vyšší. Liší se datum prodeje, zúčtování i připsání peněz.",
     data: "Vysoká. Vzniká cenný transakční záznam využitelný i dál.",
@@ -501,9 +501,9 @@ const paymentComparison = [
     icon: DollarSign,
     accent: "text-emerald-900 bg-emerald-100",
     settlement: "Ihned při prodeji.",
-    disputes: "Nízké. Není tu karetní režim zpětného vracení plateb.",
+    disputes: "Nízké. Neřeší se tu dodatečné zpětné stržení jako u karty.",
     dependency: "Nízká. Funguje i bez internetu a bez karetní sítě.",
-    accounting: "Nižší. Tok peněz je přímý a provozně jednoduchý.",
+    accounting: "Nižší. Tok peněz máme přímý a provozně jednoduchý.",
     data: "Nižší. Mimo vlastní evidenci vzniká méně externí stopy.",
   },
   {
@@ -511,20 +511,20 @@ const paymentComparison = [
     icon: Landmark,
     accent: "text-sky-900 bg-sky-100",
     settlement: "Po připsání na účet, obvykle s jasným okamžikem doručení.",
-    disputes: "Nižší. Neplatí tu karetní režim zpětného vracení plateb.",
+    disputes: "Nižší. Neplatí tu karetní pravidla pro zpětné stržení platby.",
     dependency: "Střední. Závisí na bankovní infrastruktuře, ne na karetní síti.",
-    accounting: "Nižší. Dobře se páruje k faktuře nebo variabilnímu symbolu.",
-    data: "Střední. Je to bankovní záznam, ale bez karetního schématu navíc.",
+    accounting: "Nižší. Dobře se nám páruje k faktuře nebo variabilnímu symbolu.",
+    data: "Střední. Je to bankovní záznam, ale bez karetních společností navíc.",
   },
   {
-    title: "BTC",
+    title: "Bitcoin",
     icon: Bitcoin,
     accent: "text-amber-900 bg-amber-100",
     settlement: "Podle způsobu přijetí může být rychlé a bez karetního zúčtování.",
-    disputes: "Nízké z pohledu karetního schématu. Není tu zpětné vrácení platby jako u karty.",
-    dependency: "Střední. Nepotřebuje karetní síť, ale vyžaduje vlastní proces, pravidla a technické zvládnutí.",
-    accounting: "Střední až vyšší. Záleží na tom, jak ho obchodník přijímá, převádí a eviduje.",
-    data: "Jiný typ stopy. Nevzniká karetní datová vrstva, ale soukromí záleží na konkrétním použití.",
+    disputes: "Nízké ve srovnání s kartou. Neexistuje tu karetní zpětné stržení platby.",
+    dependency: "Střední. Nepotřebujeme karetní síť, ale potřebujeme vlastní postup, pravidla a technické řešení.",
+    accounting: "Střední až vyšší. Záleží na tom, jak ho přijímáme, převádíme a evidujeme.",
+    data: "Jiný typ stopy. Nevzniká záznam u karetních společností, ale soukromí záleží na konkrétním použití.",
   },
 ] as const
 
@@ -623,12 +623,12 @@ export default function Page() {
           <div className="grid gap-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-start lg:gap-12">
             <div className="space-y-8">
               <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-                Pro zákazníka je karta pohodlná. Pro obchodníka ale často znamená{" "}
+                Pro zákazníka je karta pohodlná. Pro nás ale často znamená{" "}
                 <strong className="font-semibold text-foreground">další poplatky</strong>,{" "}
                 <strong className="font-semibold text-foreground">čekání na peníze</strong>,{" "}
                 <strong className="font-semibold text-foreground">riziko sporů</strong>, další
-                techniku a složitější účetnictví. Tady vysvětlujeme, proč část obchodníků raději
-                bere hotovost nebo převod.
+                techniku a složitější účetnictví. Tady vysvětlujeme, proč raději bereme hotovost
+                nebo převod.
               </p>
 
               <div className="flex flex-wrap gap-3">
@@ -647,7 +647,7 @@ export default function Page() {
                   eventProperties={{ location: "hero", target: "myths" }}
                   className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-muted"
                 >
-                  Mylné domněnky
+                  Rychlé soudy
                 </TrackedLink>
                 <TrackedLink
                   href="#detaily"
@@ -655,7 +655,7 @@ export default function Page() {
                   eventProperties={{ location: "hero", target: "details" }}
                   className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-5 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-muted"
                 >
-                  Detaily a zdroje
+                  Podrobnosti a zdroje
                 </TrackedLink>
               </div>
 
@@ -669,14 +669,14 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="mt-5 text-2xl font-semibold tracking-tight text-orange-950">
-                      Jednostranný příběh
+                      Jednostranný pohled
                     </div>
                     <p className="mt-3 text-sm leading-6 text-orange-950/75">
                       Ve veřejném prostoru se mluví hlavně o{" "}
                       <strong className="font-semibold text-orange-950">pohodlí zákazníka</strong> a
                       o <strong className="font-semibold text-orange-950">boji proti šedé ekonomice</strong>.
-                      Mnohem méně se ale mluví o nákladech, omezeních a rizicích, které nese
-                      obchodník.
+                      Mnohem méně se ale mluví o nákladech, omezeních a rizicích, které neseme my v
+                      provozu.
                     </p>
                   </div>
                 </div>
@@ -694,8 +694,7 @@ export default function Page() {
                     <p className="mt-3 text-sm leading-6 text-rose-950/75">
                       Články a komentáře často spojují absenci terminálu s{" "}
                       <strong className="font-semibold text-rose-950">podezřením na nepřiznané tržby</strong>.
-                      Z běžného provozního rozhodnutí se tak snadno stává podezření, že podnik
-                      nejedná poctivě.
+                      Z běžného provozního rozhodnutí se tak snadno stává podezření, že nejednáme poctivě.
                     </p>
                   </div>
                 </div>
@@ -713,8 +712,8 @@ export default function Page() {
                     <p className="mt-3 text-sm leading-6 text-amber-950/75">
                       Stát i regulace dlouhodobě podporují{" "}
                       <strong className="font-semibold text-amber-950">bezhotovostní infrastrukturu</strong>.
-                      V praxi to posiluje prostředí, ve kterém mají velcí karetní hráči typu Visa a
-                      Mastercard silnější výchozí pozici než malý obchodník.
+                      V praxi to posiluje prostředí, ve kterém mají velké karetní společnosti jako
+                      Visa a Mastercard silnější výchozí pozici než malý obchod.
                     </p>
                   </div>
                 </div>
@@ -730,7 +729,7 @@ export default function Page() {
                 <p className="text-sm leading-6 text-muted-foreground">
                   Možná jen nemáte představu,{" "}
                   <strong className="font-semibold text-foreground">
-                    co všechno se za akceptováním plateb kartou skrývá
+                    co všechno obnáší přijímání karet
                   </strong>.
                   Nevadí. Jste na správném místě.
                 </p>
@@ -766,7 +765,7 @@ export default function Page() {
           <div className="mb-12 max-w-3xl space-y-4">
             <SectionKicker>Hlavní důvody</SectionKicker>
             <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
-              Dvanáct důvodů, které obchodník řeší dřív, než vám vůbec terminál podá.
+              Dvanáct důvodů, které řešíme dřív, než vůbec nabídneme platbu kartou.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
               Na hlavní stránce uvádíme <strong className="font-semibold text-foreground">dvanáct nejčastějších důvodů</strong>.
@@ -819,10 +818,10 @@ export default function Page() {
             </Card>
             <Card className="border-white/10 bg-white/5 py-0 text-stone-50">
               <CardContent className="space-y-3 p-6">
-                <div className="text-xs uppercase tracking-[0.22em] text-stone-400">Co řeší obchodník</div>
+                <div className="text-xs uppercase tracking-[0.22em] text-stone-400">Co řešíme my</div>
                 <div className="text-2xl font-semibold">Schválení platby, zúčtování, připsání peněz a případný spor.</div>
                 <p className="text-sm leading-7 text-stone-300">
-                  Každý z těchto kroků může přidat náklad, zpoždění nebo další práci, kterou zákazník
+                  Každý z těchto kroků nám může přidat náklad, zpoždění nebo další práci, kterou zákazník
                   nevidí.
                 </p>
               </CardContent>
@@ -832,7 +831,7 @@ export default function Page() {
                 <div>
                   <div className="text-xs uppercase tracking-[0.22em] text-stone-400">1</div>
                   <div className="mt-2 font-semibold">Platba se ověřuje</div>
-                  <p className="mt-2 text-sm leading-6 text-stone-300">Transakce prochází cizí infrastrukturou a několika články mezi obchodníkem a zákazníkem.</p>
+                  <p className="mt-2 text-sm leading-6 text-stone-300">Platba prochází systémy několika firem mezi námi a zákazníkem.</p>
                 </div>
                 <div>
                   <div className="text-xs uppercase tracking-[0.22em] text-stone-400">2</div>
@@ -847,7 +846,7 @@ export default function Page() {
                 <div>
                   <div className="text-xs uppercase tracking-[0.22em] text-stone-400">4</div>
                   <div className="mt-2 font-semibold">Spor může přijít zpětně</div>
-                  <p className="mt-2 text-sm leading-6 text-stone-300">Vrácení peněz nebo reklamace může celý obchod vrátit zpátky do řešení.</p>
+                  <p className="mt-2 text-sm leading-6 text-stone-300">Vrácení peněz nebo reklamace může obchod znovu otevřít i po zaplacení.</p>
                 </div>
               </CardContent>
             </Card>
@@ -858,14 +857,14 @@ export default function Page() {
       <section id="mylne-zkratky" className="px-4 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl space-y-4">
-            <SectionKicker>Mylné zkratky</SectionKicker>
+            <SectionKicker>Rychlé soudy</SectionKicker>
             <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
-              Co si lidé často myslí a proč je obchodnická realita složitější.
+              Co si lidé často myslí a proč je naše realita v provozu složitější.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
               Tyto věty často nevznikají ze zlé vůle. Obvykle v sobě mají kus pravdy, ale
               vynechávají <strong className="font-semibold text-foreground">důležitý kontext</strong>.
-              Právě to pak vede k mylným závěrům o obchodnících i o kartách.
+              Právě to pak vede k mylným závěrům o nás i o kartách.
             </p>
           </div>
 
@@ -889,7 +888,7 @@ export default function Page() {
                   <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr]">
                     <div className="rounded-2xl bg-amber-50 p-5 text-amber-950 shadow-sm">
                       <div className="text-xs uppercase tracking-[0.22em] text-amber-700">
-                        Proč to zní uvěřitelně
+                        Proč to může znít pravdivě
                       </div>
                       <p className="mt-3 text-base leading-7">{whyItSticks}</p>
                     </div>
@@ -897,7 +896,7 @@ export default function Page() {
                     <div className="rounded-2xl bg-emerald-50 p-5 text-emerald-950 shadow-sm">
                       <div className="flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-emerald-700">
                         <TrendingDown className="size-4" />
-                        Co v této zkratce chybí
+                        Co tomu pohledu chybí
                       </div>
                       <ul className="mt-3 space-y-3 text-base leading-7">
                         {whatItMisses.map((point) => (
@@ -919,13 +918,13 @@ export default function Page() {
       <section id="detaily" className="border-y border-border/60 bg-[rgba(248,244,236,0.65)] px-4 py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="space-y-4">
-            <SectionKicker>Detaily a zdroje</SectionKicker>
+            <SectionKicker>Podrobnosti a zdroje</SectionKicker>
             <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Podrobnosti najdete níže, aby hlavní argument zůstal čitelný.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
               Každé z témat níže vychází z podkladů v projektu. Nejde o kampaň proti kartám za každou
-              cenu, ale o vysvětlení, proč je část obchodníků nechce upřednostňovat.
+              cenu, ale o vysvětlení, proč je nechceme vždy upřednostňovat.
             </p>
           </div>
 
@@ -981,7 +980,7 @@ export default function Page() {
       <section className="px-4 py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="space-y-4">
-            <SectionKicker>Datový tok</SectionKicker>
+            <SectionKicker>Kam putují data</SectionKicker>
             <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Kartová platba není jen přesun peněz. Zanechává i další datovou stopu.
             </h2>
@@ -1027,13 +1026,13 @@ export default function Page() {
       <section className="border-y border-border/60 bg-stone-950 px-4 py-20 text-stone-50">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl space-y-4">
-            <SectionKicker>Proč terminál nevznikne</SectionKicker>
+            <SectionKicker>Proč terminál není samozřejmost</SectionKicker>
             <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
-              Čtyři prozaické důvody, proč si podnik terminál nepořídí nebo ho zase zruší.
+              Čtyři běžné důvody, proč si terminál nepořídíme nebo ho zase zrušíme.
             </h2>
             <p className="text-lg leading-8 text-stone-300">
               Nejde jen o ideologii nebo odpor ke změně. Často jde o úplně běžné provozní rozhodnutí
-              malého podniku.
+              malého provozu.
             </p>
           </div>
 
@@ -1058,11 +1057,11 @@ export default function Page() {
           <div className="space-y-4">
             <SectionKicker>Bezpečnost</SectionKicker>
             <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
-              Když obchodník přijímá karty, nepřijímá jen platbu, ale i další bezpečnostní riziko.
+              Když přijímáme karty, nepřijímáme jen platbu, ale i další bezpečnostní riziko.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
               Úniky platebních dat u velkých firem ukazují, že karetní infrastruktura není jen
-              pohodlí. Znamená to i větší útokovou plochu a další odpovědnost.
+              pohodlí. Znamená to i víc míst, kde se může něco pokazit, a další odpovědnost.
             </p>
           </div>
 
@@ -1087,13 +1086,13 @@ export default function Page() {
       <section className="px-4 py-20">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl space-y-4">
-            <SectionKicker>Fér kompromis</SectionKicker>
+            <SectionKicker>Srovnání možností</SectionKicker>
             <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
               Jak si z pohledu provozu stojí karta, hotovost, převod a bitcoin.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
               Nechceme ignorovat pohodlí zákazníků. Chceme jen ukázat, že různé platební metody mají
-              z pohledu obchodníka velmi odlišné důsledky pro likviditu, spory, účetnictví i data.
+              pro nás velmi odlišné důsledky: kdy máme peníze, kolik řešíme sporů, účetnictví i data.
             </p>
           </div>
 
@@ -1102,7 +1101,7 @@ export default function Page() {
               <CardContent className="space-y-6 p-8">
                 <div className="text-xs uppercase tracking-[0.22em] text-stone-400">Zpráva pro zákazníka</div>
                 <p className="text-3xl leading-tight text-balance" style={displayFont}>
-                  Když obchodník řekne „raději hotově nebo převodem“, nemusí tím říkat „raději bez
+                  Když řekneme „raději hotově nebo převodem“, nemusí to znamenat „raději bez
                   daní“. Často tím říká „raději bez zbytečných komplikací“.
                 </p>
                 <p className="text-sm leading-7 text-stone-300">
@@ -1180,11 +1179,11 @@ export default function Page() {
           <div className="space-y-4">
             <SectionKicker>Transparentnost</SectionKicker>
             <h2 className="text-3xl leading-tight text-balance sm:text-4xl" style={displayFont}>
-              Jak s obsahem pracujeme, jak ho opravovat a jaké minimum měříme.
+              Jak s obsahem pracujeme, kde hlásit chyby a co na webu měříme.
             </h2>
             <p className="text-lg leading-8 text-muted-foreground">
               Text stojí na veřejně dostupných zdrojích, které jsou průběžně doplňované a
-              revidované. Kde jde o interpretaci, snažíme se ji oddělit od faktu. Poslední větší
+              revidované. Kde jde o interpretaci, snažíme se ji oddělit od faktů. Poslední větší
               revize obsahu proběhla <strong className="font-semibold text-foreground">{lastUpdatedLabel}</strong>.
             </p>
           </div>
@@ -1217,10 +1216,10 @@ export default function Page() {
                 <div className="text-xs uppercase tracking-[0.22em] text-muted-foreground">
                   Kontakt a opravy
                 </div>
-                <h3 className="text-xl font-semibold leading-tight">Pošli chybu nebo vlastní příběh</h3>
+                <h3 className="text-xl font-semibold leading-tight">Napište chybu nebo vlastní zkušenost</h3>
                 <p className="text-sm leading-7 text-muted-foreground">
-                  Preferujeme veřejné issue nebo pull request, aby byl vidět i kontext a následná
-                  oprava.
+                  Preferujeme veřejné hlášení na GitHubu nebo pull request, aby byl vidět kontext i
+                  následná oprava.
                 </p>
                 <TrackedLink
                   href={siteConfig.issuesUrl}
